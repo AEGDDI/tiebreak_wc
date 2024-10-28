@@ -1,0 +1,1779 @@
+
+--- Processing Year: 2016 ---
+
+=== Initial Standings for Year 2016 Before Processing Any Goals ===
+
+               team   stage  before_last_game_points  before_last_game_goals_scored  before_last_game_goals_conceded  total_goal_difference
+             France Group A                        4                              4                                1                      3
+        Switzerland Group A                        3                              2                                1                      1
+            Romania Group A                        1                              2                                3                     -1
+            Albania Group A                        0                              0                                3                     -3
+            England Group B                        3                              3                                2                      1
+           Slovakia Group B                        2                              3                                3                      0
+              Wales Group B                        2                              3                                3                      0
+             Russia Group B                        1                              2                                3                     -1
+            Germany Group C                        3                              2                                0                      2
+             Poland Group C                        3                              1                                0                      1
+   Northern Ireland Group C                        2                              2                                1                      1
+            Ukraine Group C                        0                              0                                4                     -4
+              Spain Group D                        4                              4                                0                      4
+            Croatia Group D                        3                              3                                2                      1
+     Czech Republic Group D                        1                              2                                3                     -1
+             Turkey Group D                        0                              0                                4                     -4
+              Italy Group E                        4                              3                                0                      3
+            Belgium Group E                        2                              3                                2                      1
+             Sweden Group E                        1                              1                                2                     -1
+Republic of Ireland Group E                        1                              1                                4                     -3
+            Hungary Group F                        3                              3                                1                      2
+            Iceland Group F                        2                              2                                2                      0
+           Portugal Group F                        2                              1                                1                      0
+            Austria Group F                        1                              0                                2                     -2
+
+===============================================================
+
+
+--- Analyzing Goal 146 in Group A: On date 2016-06-19 00:00:00, Minute 43 (Player Team: Albania, Home: Romania, Away: Albania) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Wales', 'Northern Ireland', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+109             Wales             3                 1                      0   
+113  Northern Ireland             3                 1                      1   
+117    Czech Republic             2                 1                     -1   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+109                   3  
+113                   2  
+117                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 147 in Group B: On date 2016-06-20 00:00:00, Minute 11 (Player Team: Wales, Home: Russia, Away: Wales) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             3                 1                      1   
+117    Czech Republic             2                 1                     -1   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+117                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 148 in Group B: On date 2016-06-20 00:00:00, Minute 20 (Player Team: Wales, Home: Russia, Away: Wales) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             3                 1                      1   
+117    Czech Republic             2                 1                     -1   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+117                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 149 in Group B: On date 2016-06-20 00:00:00, Minute 67 (Player Team: Wales, Home: Russia, Away: Wales) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             3                 1                      1   
+117    Czech Republic             2                 1                     -1   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+117                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 156 in Group D: On date 2016-06-21 00:00:00, Minute 7 (Player Team: Spain, Home: Croatia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             3                 1                      1   
+117    Czech Republic             2                 1                     -1   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+117                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 152 in Group D: On date 2016-06-21 00:00:00, Minute 10 (Player Team: Turkey, Home: Czech Republic, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             3                 1                      1   
+118            Turkey             3                 3                     -3   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   1  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 151 in Group C: On date 2016-06-21 00:00:00, Minute 30 (Player Team: Germany, Home: Northern Ireland, Away: Germany) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -3   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   1  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 154 in Group D: On date 2016-06-21 00:00:00, Minute 45 (Player Team: Croatia, Home: Croatia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -3   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   1  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 150 in Group C: On date 2016-06-21 00:00:00, Minute 54 (Player Team: Poland, Home: Ukraine, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -3   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   1  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 153 in Group D: On date 2016-06-21 00:00:00, Minute 65 (Player Team: Turkey, Home: Czech Republic, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 155 in Group D: On date 2016-06-21 00:00:00, Minute 87 (Player Team: Croatia, Home: Croatia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 159 in Group F: On date 2016-06-22 00:00:00, Minute 18 (Player Team: Iceland, Home: Iceland, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 162 in Group F: On date 2016-06-22 00:00:00, Minute 19 (Player Team: Hungary, Home: Hungary, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             2                 0                     -1   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   1  
+
+
+--- Analyzing Goal 165 in Group F: On date 2016-06-22 00:00:00, Minute 42 (Player Team: Portugal, Home: Hungary, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   2  
+
+
+--- Analyzing Goal 163 in Group F: On date 2016-06-22 00:00:00, Minute 47 (Player Team: Hungary, Home: Hungary, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             2                 0                     -1   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   2  
+
+
+--- Analyzing Goal 166 in Group F: On date 2016-06-22 00:00:00, Minute 50 (Player Team: Portugal, Home: Hungary, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   3  
+
+
+--- Analyzing Goal 164 in Group F: On date 2016-06-22 00:00:00, Minute 55 (Player Team: Hungary, Home: Hungary, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             2                 0                     -1   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   3  
+
+
+--- Analyzing Goal 161 in Group F: On date 2016-06-22 00:00:00, Minute 60 (Player Team: Austria, Home: Iceland, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+125          Portugal             2                 0                     -1   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+125                   3  
+
+
+--- Analyzing Goal 167 in Group F: On date 2016-06-22 00:00:00, Minute 62 (Player Team: Portugal, Home: Hungary, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                 team  total_points  last_game_points  total_goal_difference  \
+106           Albania             3                 3                     -2   
+108          Slovakia             3                 1                      0   
+113  Northern Ireland             2                 0                      0   
+118            Turkey             3                 3                     -2   
+122            Sweden             2                 1                     -1   
+124           Iceland             3                 1                      0   
+
+     total_goals_scored  
+106                   1  
+108                   3  
+113                   2  
+118                   2  
+122                   1  
+124                   3  
+
+
+--- Analyzing Goal 158 in Group E: On date 2016-06-22 00:00:00, Minute 84 (Player Team: Belgium, Home: Sweden, Away: Belgium) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                    team  total_points  last_game_points  \
+106              Albania             3                 3   
+108             Slovakia             3                 1   
+113     Northern Ireland             2                 0   
+118               Turkey             3                 3   
+121  Republic of Ireland             2                 1   
+124              Iceland             3                 1   
+
+     total_goal_difference  total_goals_scored  
+106                     -2                   1  
+108                      0                   3  
+113                      0                   2  
+118                     -2                   2  
+121                     -3                   1  
+124                      0                   3  
+
+
+--- Analyzing Goal 157 in Group E: On date 2016-06-22 00:00:00, Minute 85 (Player Team: Republic of Ireland, Home: Italy, Away: Republic of Ireland) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                    team  total_points  last_game_points  \
+106              Albania             3                 3   
+108             Slovakia             3                 1   
+113     Northern Ireland             2                 0   
+118               Turkey             3                 3   
+121  Republic of Ireland             4                 3   
+124              Iceland             3                 1   
+
+     total_goal_difference  total_goals_scored  
+106                     -2                   1  
+108                      0                   3  
+113                      0                   2  
+118                     -2                   2  
+121                     -2                   2  
+124                      0                   3  
+
+
+--- Analyzing Goal 160 in Group F: On date 2016-06-22 00:00:00, Minute 94 (Player Team: Iceland, Home: Iceland, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Albania', 'Slovakia', 'Northern Ireland', 'Turkey']
+Third-placed teams DataFrame after this goal:
+                    team  total_points  last_game_points  \
+106              Albania             3                 3   
+108             Slovakia             3                 1   
+113     Northern Ireland             2                 0   
+118               Turkey             3                 3   
+121  Republic of Ireland             4                 3   
+125             Portugal             3                 1   
+
+     total_goal_difference  total_goals_scored  
+106                     -2                   1  
+108                      0                   3  
+113                      0                   2  
+118                     -2                   2  
+121                     -2                   2  
+125                      0                   4  
+
+
+--- Processing Year: 2021 ---
+
+=== Initial Standings for Year 2021 Before Processing Any Goals ===
+
+           team   stage  before_last_game_points  before_last_game_goals_scored  before_last_game_goals_conceded  total_goal_difference
+          Italy Group A                        4                              6                                0                      6
+          Wales Group A                        3                              3                                1                      2
+    Switzerland Group A                        1                              1                                4                     -3
+         Turkey Group A                        0                              0                                5                     -5
+        Belgium Group B                        4                              5                                1                      4
+        Finland Group B                        2                              1                                1                      0
+         Russia Group B                        2                              1                                3                     -2
+        Denmark Group B                        0                              1                                3                     -2
+    Netherlands Group C                        4                              5                                2                      3
+        Ukraine Group C                        2                              4                                4                      0
+        Austria Group C                        2                              3                                3                      0
+North Macedonia Group C                        0                              2                                5                     -3
+ Czech Republic Group D                        3                              3                                1                      2
+        England Group D                        3                              1                                0                      1
+        Croatia Group D                        1                              1                                2                     -1
+       Scotland Group D                        1                              0                                2                     -2
+         Sweden Group E                        3                              1                                0                      1
+       Slovakia Group E                        2                              2                                2                      0
+          Spain Group E                        2                              1                                1                      0
+         Poland Group E                        1                              2                                3                     -1
+         France Group F                        3                              2                                1                      1
+       Portugal Group F                        2                              5                                4                      1
+        Germany Group F                        2                              4                                3                      1
+        Hungary Group F                        1                              1                                4                     -3
+
+===============================================================
+
+
+--- Analyzing Goal 168 in Group A: On date 2021-06-20 00:00:00, Minute 6 (Player Team: Switzerland, Home: Switzerland, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Switzerland', 'Russia', 'Austria', 'Croatia']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+129  Switzerland             4                 3                     -2   
+133       Russia             3                 1                     -2   
+136      Austria             3                 1                      0   
+141      Croatia             2                 1                     -1   
+145        Spain             3                 1                      0   
+148      Germany             3                 1                      1   
+
+     total_goals_scored  
+129                   2  
+133                   1  
+136                   3  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 169 in Group A: On date 2021-06-20 00:00:00, Minute 26 (Player Team: Switzerland, Home: Switzerland, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Switzerland', 'Russia', 'Austria', 'Croatia']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+129  Switzerland             4                 3                     -1   
+133       Russia             3                 1                     -2   
+136      Austria             3                 1                      0   
+141      Croatia             2                 1                     -1   
+145        Spain             3                 1                      0   
+148      Germany             3                 1                      1   
+
+     total_goals_scored  
+129                   3  
+133                   1  
+136                   3  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 172 in Group A: On date 2021-06-20 00:00:00, Minute 39 (Player Team: Italy, Home: Italy, Away: Wales) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Russia', 'Austria', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+133   Russia             3                 1                     -2   
+136  Austria             3                 1                      0   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+133                   1  
+136                   3  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 171 in Group A: On date 2021-06-20 00:00:00, Minute 62 (Player Team: Turkey, Home: Switzerland, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Russia', 'Austria', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+133   Russia             3                 1                     -2   
+136  Austria             3                 1                      0   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+133                   1  
+136                   3  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 170 in Group A: On date 2021-06-20 00:00:00, Minute 68 (Player Team: Switzerland, Home: Switzerland, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Russia', 'Austria', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+133   Russia             3                 1                     -2   
+136  Austria             3                 1                      0   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+133                   1  
+136                   3  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 183 in Group C: On date 2021-06-21 00:00:00, Minute 21 (Player Team: Austria, Home: Ukraine, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Russia', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+133   Russia             3                 1                     -2   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+133                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 180 in Group C: On date 2021-06-21 00:00:00, Minute 24 (Player Team: Netherlands, Home: North Macedonia, Away: Netherlands) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Russia', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+133   Russia             3                 1                     -2   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+133                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 174 in Group B: On date 2021-06-21 00:00:00, Minute 38 (Player Team: Denmark, Home: Russia, Away: Denmark) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Denmark', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+134  Denmark             3                 3                     -1   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+134                   2  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 181 in Group C: On date 2021-06-21 00:00:00, Minute 50 (Player Team: Netherlands, Home: North Macedonia, Away: Netherlands) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Denmark', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+134  Denmark             3                 3                     -1   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+134                   2  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 182 in Group C: On date 2021-06-21 00:00:00, Minute 58 (Player Team: Netherlands, Home: North Macedonia, Away: Netherlands) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Denmark', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+134  Denmark             3                 3                     -1   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+134                   2  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 175 in Group B: On date 2021-06-21 00:00:00, Minute 59 (Player Team: Denmark, Home: Russia, Away: Denmark) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+132  Finland             3                 1                      0   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 173 in Group B: On date 2021-06-21 00:00:00, Minute 70 (Player Team: Russia, Home: Russia, Away: Denmark) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Denmark', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+134  Denmark             3                 3                     -1   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+134                   3  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 178 in Group B: On date 2021-06-21 00:00:00, Minute 74 (Player Team: Belgium, Home: Finland, Away: Belgium) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+132  Finland             2                 0                     -1   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 176 in Group B: On date 2021-06-21 00:00:00, Minute 79 (Player Team: Denmark, Home: Russia, Away: Denmark) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+132  Finland             2                 0                     -1   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 179 in Group B: On date 2021-06-21 00:00:00, Minute 81 (Player Team: Belgium, Home: Finland, Away: Belgium) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+132  Finland             2                 0                     -2   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 177 in Group B: On date 2021-06-21 00:00:00, Minute 82 (Player Team: Denmark, Home: Russia, Away: Denmark) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+132  Finland             2                 0                     -2   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 188 in Group D: On date 2021-06-22 00:00:00, Minute 12 (Player Team: England, Home: Czech Republic, Away: England) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+132  Finland             2                 0                     -2   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+141                   1  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 184 in Group D: On date 2021-06-22 00:00:00, Minute 17 (Player Team: Croatia, Home: Croatia, Away: Scotland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+145           Spain             3                 1                      0   
+148         Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 187 in Group D: On date 2021-06-22 00:00:00, Minute 42 (Player Team: Scotland, Home: Croatia, Away: Scotland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Croatia']
+Third-placed teams DataFrame after this goal:
+        team  total_points  last_game_points  total_goal_difference  \
+128    Wales             3                 0                      1   
+132  Finland             2                 0                     -2   
+137  Ukraine             2                 0                     -1   
+141  Croatia             2                 1                     -1   
+145    Spain             3                 1                      0   
+148  Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+141                   2  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 185 in Group D: On date 2021-06-22 00:00:00, Minute 62 (Player Team: Croatia, Home: Croatia, Away: Scotland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+145           Spain             3                 1                      0   
+148         Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 186 in Group D: On date 2021-06-22 00:00:00, Minute 77 (Player Team: Croatia, Home: Croatia, Away: Scotland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+145           Spain             3                 1                      0   
+148         Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 194 in Group E: On date 2021-06-23 00:00:00, Minute 2 (Player Team: Sweden, Home: Sweden, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+145           Spain             3                 1                      0   
+148         Germany             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+145                   1  
+148                   4  
+
+
+--- Analyzing Goal 205 in Group F: On date 2021-06-23 00:00:00, Minute 11 (Player Team: Hungary, Home: Germany, Away: Hungary) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+145           Spain             3                 1                      0   
+149        Portugal             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+145                   1  
+149                   5  
+
+
+--- Analyzing Goal 189 in Group E: On date 2021-06-23 00:00:00, Minute 30 (Player Team: Spain, Home: Slovakia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -1   
+149        Portugal             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+149                   5  
+
+
+--- Analyzing Goal 199 in Group F: On date 2021-06-23 00:00:00, Minute 31 (Player Team: Portugal, Home: Portugal, Away: France) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -1   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   2  
+
+
+--- Analyzing Goal 201 in Group F: On date 2021-06-23 00:00:00, Minute 47 (Player Team: France, Home: Portugal, Away: France) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -1   
+149        Portugal             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+149                   6  
+
+
+--- Analyzing Goal 190 in Group E: On date 2021-06-23 00:00:00, Minute 48 (Player Team: Spain, Home: Slovakia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -2   
+149        Portugal             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+149                   6  
+
+
+--- Analyzing Goal 191 in Group E: On date 2021-06-23 00:00:00, Minute 56 (Player Team: Spain, Home: Slovakia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -3   
+149        Portugal             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+149                   6  
+
+
+--- Analyzing Goal 195 in Group E: On date 2021-06-23 00:00:00, Minute 59 (Player Team: Sweden, Home: Sweden, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -3   
+149        Portugal             3                 1                      1   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+149                   6  
+
+
+--- Analyzing Goal 200 in Group F: On date 2021-06-23 00:00:00, Minute 60 (Player Team: Portugal, Home: Portugal, Away: France) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -3   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   3  
+
+
+--- Analyzing Goal 197 in Group E: On date 2021-06-23 00:00:00, Minute 61 (Player Team: Poland, Home: Sweden, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -3   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   3  
+
+
+--- Analyzing Goal 203 in Group F: On date 2021-06-23 00:00:00, Minute 66 (Player Team: Germany, Home: Germany, Away: Hungary) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -3   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   3  
+
+
+--- Analyzing Goal 192 in Group E: On date 2021-06-23 00:00:00, Minute 67 (Player Team: Spain, Home: Slovakia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -4   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   3  
+
+
+--- Analyzing Goal 206 in Group F: On date 2021-06-23 00:00:00, Minute 68 (Player Team: Hungary, Home: Germany, Away: Hungary) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -4   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   3  
+
+
+--- Analyzing Goal 193 in Group E: On date 2021-06-23 00:00:00, Minute 71 (Player Team: Spain, Home: Slovakia, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -5   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   3  
+
+
+--- Analyzing Goal 198 in Group E: On date 2021-06-23 00:00:00, Minute 84 (Player Team: Poland, Home: Sweden, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+146          Poland             2                 1                     -1   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+146                   4  
+147                   3  
+
+
+--- Analyzing Goal 204 in Group F: On date 2021-06-23 00:00:00, Minute 84 (Player Team: Germany, Home: Germany, Away: Hungary) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+146          Poland             2                 1                     -1   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+146                   4  
+147                   3  
+
+
+--- Analyzing Goal 196 in Group E: On date 2021-06-23 00:00:00, Minute 94 (Player Team: Sweden, Home: Sweden, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Wales', 'Finland', 'Ukraine', 'Czech Republic']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+128           Wales             3                 0                      1   
+132         Finland             2                 0                     -2   
+137         Ukraine             2                 0                     -1   
+139  Czech Republic             3                 0                      1   
+144        Slovakia             2                 0                     -5   
+147          France             3                 0                      0   
+
+     total_goals_scored  
+128                   3  
+132                   1  
+137                   4  
+139                   3  
+144                   2  
+147                   3  
+
+
+--- Processing Year: 2024 ---
+
+=== Initial Standings for Year 2024 Before Processing Any Goals ===
+
+          team   stage  before_last_game_points  before_last_game_goals_scored  before_last_game_goals_conceded  total_goal_difference
+       Germany Group A                        4                              7                                1                      6
+   Switzerland Group A                        3                              4                                2                      2
+      Scotland Group A                        1                              2                                6                     -4
+       Hungary Group A                        0                              1                                5                     -4
+         Spain Group B                        4                              4                                0                      4
+         Italy Group B                        2                              2                                2                      0
+       Albania Group B                        1                              3                                4                     -1
+       Croatia Group B                        1                              2                                5                     -3
+       England Group C                        3                              1                                0                      1
+       Denmark Group C                        2                              1                                1                      0
+      Slovenia Group C                        2                              1                                1                      0
+        Serbia Group C                        1                              0                                1                     -1
+   Netherlands Group D                        3                              2                                1                      1
+        France Group D                        3                              1                                0                      1
+       Austria Group D                        2                              3                                2                      1
+        Poland Group D                        0                              2                                5                     -3
+       Belgium Group E                        3                              2                                0                      2
+       Romania Group E                        2                              3                                2                      1
+       Ukraine Group E                        2                              2                                4                     -2
+      Slovakia Group E                        1                              1                                2                     -1
+      Portugal Group F                        4                              5                                1                      4
+        Turkey Group F                        2                              3                                4                     -1
+Czech Republic Group F                        1                              2                                3                     -1
+       Georgia Group F                        1                              2                                4                     -2
+
+===============================================================
+
+
+--- Analyzing Goal 216 in Group C: On date 2024-06-20 00:00:00, Minute 18 (Player Team: England, Home: Denmark, Away: England) ---
+Top 4 third-placed teams after this goal: ['Scotland', 'Albania', 'Denmark', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+153        Scotland             2                 1                     -4   
+157         Albania             2                 1                     -1   
+160         Denmark             2                 0                     -1   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+153                   2  
+157                   3  
+160                   1  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 215 in Group C: On date 2024-06-20 00:00:00, Minute 34 (Player Team: Denmark, Home: Denmark, Away: England) ---
+Top 4 third-placed teams after this goal: ['Scotland', 'Albania', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+153        Scotland             2                 1                     -4   
+157         Albania             2                 1                     -1   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+153                   2  
+157                   3  
+161                   1  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 213 in Group C: On date 2024-06-20 00:00:00, Minute 69 (Player Team: Slovenia, Home: Slovenia, Away: Serbia) ---
+Top 4 third-placed teams after this goal: ['Scotland', 'Albania', 'Denmark', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+153        Scotland             2                 1                     -4   
+157         Albania             2                 1                     -1   
+160         Denmark             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+153                   2  
+157                   3  
+160                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 214 in Group C: On date 2024-06-20 00:00:00, Minute 95 (Player Team: Serbia, Home: Slovenia, Away: Serbia) ---
+Top 4 third-placed teams after this goal: ['Scotland', 'Albania', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+153        Scotland             2                 1                     -4   
+157         Albania             2                 1                     -1   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+153                   2  
+157                   3  
+161                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 207 in Group A: On date 2024-06-23 00:00:00, Minute 28 (Player Team: Switzerland, Home: Switzerland, Away: Germany) ---
+Top 4 third-placed teams after this goal: ['Scotland', 'Albania', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+153        Scotland             2                 1                     -4   
+157         Albania             2                 1                     -1   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+153                   2  
+157                   3  
+161                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 208 in Group A: On date 2024-06-23 00:00:00, Minute 92 (Player Team: Germany, Home: Switzerland, Away: Germany) ---
+Top 4 third-placed teams after this goal: ['Scotland', 'Albania', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+153        Scotland             2                 1                     -4   
+157         Albania             2                 1                     -1   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+153                   2  
+157                   3  
+161                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 209 in Group A: On date 2024-06-23 00:00:00, Minute 100 (Player Team: Hungary, Home: Scotland, Away: Hungary) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Albania', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+157         Albania             2                 1                     -1   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+157                   3  
+161                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 210 in Group B: On date 2024-06-24 00:00:00, Minute 13 (Player Team: Spain, Home: Albania, Away: Spain) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   2  
+161                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 211 in Group B: On date 2024-06-24 00:00:00, Minute 55 (Player Team: Croatia, Home: Croatia, Away: Italy) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Italy', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+156           Italy             2                 0                     -1   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+156                   2  
+161                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 212 in Group B: On date 2024-06-24 00:00:00, Minute 98 (Player Team: Italy, Home: Croatia, Away: Italy) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+165                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 219 in Group D: On date 2024-06-25 00:00:00, Minute 6 (Player Team: Austria, Home: Netherlands, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+164     Netherlands             3                 0                      0   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   2  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 217 in Group D: On date 2024-06-25 00:00:00, Minute 47 (Player Team: Netherlands, Home: Netherlands, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+165                   4  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 222 in Group D: On date 2024-06-25 00:00:00, Minute 56 (Player Team: France, Home: France, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+165                   4  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 220 in Group D: On date 2024-06-25 00:00:00, Minute 59 (Player Team: Austria, Home: Netherlands, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+164     Netherlands             3                 0                      0   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   3  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 218 in Group D: On date 2024-06-25 00:00:00, Minute 75 (Player Team: Netherlands, Home: Netherlands, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+165                   5  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 223 in Group D: On date 2024-06-25 00:00:00, Minute 79 (Player Team: Poland, Home: France, Away: Poland) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Austria']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+165         Austria             3                 1                      1   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+165                   5  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 221 in Group D: On date 2024-06-25 00:00:00, Minute 80 (Player Team: Austria, Home: Netherlands, Away: Austria) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+               team  total_points  last_game_points  total_goal_difference  \
+154         Hungary             3                 3                     -3   
+158         Croatia             2                 1                     -3   
+161        Slovenia             3                 1                      0   
+164     Netherlands             3                 0                      0   
+169         Ukraine             3                 1                     -2   
+173  Czech Republic             2                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+173                   2  
+
+
+--- Analyzing Goal 226 in Group F: On date 2024-06-26 00:00:00, Minute 2 (Player Team: Georgia, Home: Georgia, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+154      Hungary             3                 3                     -3   
+158      Croatia             2                 1                     -3   
+161     Slovenia             3                 1                      0   
+164  Netherlands             3                 0                      0   
+169      Ukraine             3                 1                     -2   
+172       Turkey             3                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+172                   3  
+
+
+--- Analyzing Goal 224 in Group E: On date 2024-06-26 00:00:00, Minute 24 (Player Team: Slovakia, Home: Slovakia, Away: Romania) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+154      Hungary             3                 3                     -3   
+158      Croatia             2                 1                     -3   
+161     Slovenia             3                 1                      0   
+164  Netherlands             3                 0                      0   
+169      Ukraine             3                 1                     -2   
+172       Turkey             3                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+172                   3  
+
+
+--- Analyzing Goal 225 in Group E: On date 2024-06-26 00:00:00, Minute 37 (Player Team: Romania, Home: Slovakia, Away: Romania) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+154      Hungary             3                 3                     -3   
+158      Croatia             2                 1                     -3   
+161     Slovenia             3                 1                      0   
+164  Netherlands             3                 0                      0   
+169      Ukraine             3                 1                     -2   
+172       Turkey             3                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+172                   3  
+
+
+--- Analyzing Goal 229 in Group F: On date 2024-06-26 00:00:00, Minute 51 (Player Team: Turkey, Home: Czech Republic, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+154      Hungary             3                 3                     -3   
+158      Croatia             2                 1                     -3   
+161     Slovenia             3                 1                      0   
+164  Netherlands             3                 0                      0   
+169      Ukraine             3                 1                     -2   
+174      Georgia             4                 3                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+174                   3  
+
+
+--- Analyzing Goal 227 in Group F: On date 2024-06-26 00:00:00, Minute 57 (Player Team: Georgia, Home: Georgia, Away: Portugal) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+154      Hungary             3                 3                     -3   
+158      Croatia             2                 1                     -3   
+161     Slovenia             3                 1                      0   
+164  Netherlands             3                 0                      0   
+169      Ukraine             3                 1                     -2   
+174      Georgia             4                 3                      0   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+174                   4  
+
+
+--- Analyzing Goal 228 in Group F: On date 2024-06-26 00:00:00, Minute 66 (Player Team: Czech Republic, Home: Czech Republic, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+154      Hungary             3                 3                     -3   
+158      Croatia             2                 1                     -3   
+161     Slovenia             3                 1                      0   
+164  Netherlands             3                 0                      0   
+169      Ukraine             3                 1                     -2   
+172       Turkey             3                 1                     -1   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+172                   4  
+
+
+--- Analyzing Goal 230 in Group F: On date 2024-06-26 00:00:00, Minute 94 (Player Team: Turkey, Home: Czech Republic, Away: Turkey) ---
+Top 4 third-placed teams after this goal: ['Hungary', 'Croatia', 'Slovenia', 'Netherlands']
+Third-placed teams DataFrame after this goal:
+            team  total_points  last_game_points  total_goal_difference  \
+154      Hungary             3                 3                     -3   
+158      Croatia             2                 1                     -3   
+161     Slovenia             3                 1                      0   
+164  Netherlands             3                 0                      0   
+169      Ukraine             3                 1                     -2   
+174      Georgia             4                 3                      0   
+
+     total_goals_scored  
+154                   2  
+158                   3  
+161                   2  
+164                   4  
+169                   2  
+174                   4  
+

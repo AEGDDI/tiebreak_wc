@@ -1,0 +1,19 @@
+group_name
+stage
+
+home
+home_team
+
+away
+away_team
+
+
+
+
+no own_goal
+
+minute_regulation, minute_stoppage
+goal_minute
+
+player_team_name
+scorer_nationality

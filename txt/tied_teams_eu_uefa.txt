@@ -1,0 +1,85 @@
+----------------- 2016
+Sweden 16, 19' 
+match 1: 1
+match 2: 1
+match 3 (19'):0
+tot: 2
+
+Portugal 16, 19' 
+match 1: 0
+match 2: 2
+match 3 (19'):0
+tot: 2
+
+tied 
+
+-----------------
+
+Portugal 16, 42' 
+match 1: 0
+match 2: 2
+match 3 (42'):0
+tot: 2
+
+Northern Ireland 16, 42' 
+match 1: 1
+match 2: 3
+match 3 (42'):0
+tot: 4
+
+----------------- 2021
+
+Switzerland 21, 28' 
+match 1: 1
+match 2: 3
+match 3 (28'):0
+tot: 4
+
+Hungary 21, 11' 
+match 1: 2
+match 2: 1
+match 3 (28'):0
+tot: 3
+
+-----------------
+
+Slovakia 21, 47' 
+match 1: 1
+match 2: 3
+match 3 (47'):1
+tot: 5
+
+Denmark 21, 47' 
+match 1: 0	
+match 2: 3
+match 3 (47'):0
+tot: 3
+
+----------------- 2024
+
+Slovakia 24, 13' 
+match 1: 1
+match 2: 0
+match 3 (13'):0
+tot: 1
+
+Netherlands 24, 13' 
+match 1: 1	
+match 2: 1
+match 3 (13'):0
+tot: 2
+
+-----------------
+
+Georgia 24, 100' 
+match 1: 1
+match 2: 4
+match 3 (100'):1
+tot: 6
+
+Netherlands 24, 100' 
+match 1: 1	
+match 2: 1
+match 3 (100'):0
+tot: 2
+

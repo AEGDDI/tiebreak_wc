@@ -35,6 +35,5 @@ Data sources include both **Wikipedia** and **Kaggle**.
 
 - `data/in/`: Raw match data and Elo ratings
 - `data/out/`: Processed group dynamics data for suspense analysis
-- `scripts/`: Code to compute group standings using both FIFA and UEFA tie-breaking criteria
-- `analysis/`: Scripts and notebooks for suspense quantification and comparison
-- `figures/
+
+

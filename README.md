@@ -19,6 +19,7 @@ Suspense is defined as the proximity to a potential change in the composition of
 
 For example, if Brazil and Argentina are currently qualifying from a group, but Italy is just one goal away (either by scoring or due to a goal conceded by Argentina) from overtaking Argentina, then that scenario is considered to be high in suspense.
 
+A full explanation of how suspense has been formally defined can be found in [`suspense.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/suspense.docx)
 ## Data
 
 We collected and processed data from:
@@ -29,7 +30,7 @@ We collected and processed data from:
 Data sources include both **Wikipedia** and **Kaggle**.
 
 - [`data/in/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/in): This folder contains raw data on goals scored during group stage matches in both the UEFA European Championships and FIFA World Cups, along with the **Elo ratings** of the national teams.
-- [`data/out/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/out): This folder contains processed datasets built to evaluate minute-by-minute group composition and the potential for changes in qualification, according to both FIFA and UEFA tie-breaking criteria.
+- [`data/out/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/out/wiki): This folder contains processed datasets built to evaluate minute-by-minute group composition and the potential for changes in qualification, according to both FIFA and UEFA tie-breaking criteria.
 
 ## Repository Structure
 

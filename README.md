@@ -19,7 +19,7 @@ Suspense is defined as the proximity to a potential change in the composition of
 
 For example, if Brazil and Argentina are currently qualifying from a group, but Italy is just one goal away (either by scoring or due to a goal conceded by Argentina) from overtaking Argentina, then that scenario is considered to be high in suspense.
 
-A full explanation of how suspense has been formally defined can be found in - [`suspense.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/suspense.docx)
+A full explanation of how suspense has been formally defined can be found in [`suspense.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/suspense.docx)
 ## Data
 
 We collected and processed data from:

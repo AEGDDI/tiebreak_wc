@@ -19,6 +19,10 @@ Suspense is defined as the proximity to a potential change in the composition of
 
 For example, in Group F of Euro 2024, entering the third and final matchday, Portugal and Turkey were in qualifying positions for the knockout stage. However, Turkey was playing against Czech Republic, and the match started 0–0. In that situation, a single goal by Czech Republic would have allowed them to overtake Turkey on points and qualify instead. Since the qualification status could change dramatically with just one goal, this scenario is marked as having maximum suspense (suspense = 1).
 
+  Another example can be drawn from Group A of Euro 2024. In the final matchday, Hungary scored in the 100th minute against Scotland, winning the match 1–0. At that point, this late goal put Hungary at 3 points with a goal difference of -3, making them temporarily one of the best third-placed teams, and therefore potentially qualifying for the knockout stage.
+
+  In that same moment, Scotland was still in the match, and had they scored an equalizer, they would have overtaken Hungary and become the third-placed team with a better goal difference, potentially qualifying instead. At that stage of the tournament, the four best third-placed teams included Hungary, while Albania (Group B) and Czech Republic (Group F) were the ones excluded. However, by the end of the group stage, when all matches were completed, Georgia (Group F) would eventually overtake Hungary, qualifying as one of the best third-placed teams and eliminating Hungary. This, however, is a posterior development and does not affect the suspense calculation for Group A. Suspense is assessed in real time, based on the information available during the match.
+
 A full explanation of how suspense has been formally defined can be found in [`suspense.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/suspense.docx)
 ## Data
 

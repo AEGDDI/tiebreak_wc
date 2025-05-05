@@ -17,7 +17,13 @@ Suspense is defined as the proximity to a potential change in the composition of
 
 > *A suspenseful moment occurs when a single goal (in any group match) could alter the current qualification outcome.*
 
-For example, if Brazil and Argentina are currently qualifying from a group, but Italy is just one goal away (either by scoring or due to a goal conceded by Argentina) from overtaking Argentina, then that scenario is considered to be high in suspense.
+For example, in Group F of Euro 2024, entering the third and final matchday, Portugal and Turkey were in qualifying positions for the knockout stage. However, Turkey was playing against Czech Republic, and the match started 0–0. In that situation, a single goal by Czech Republic would have allowed them to overtake Turkey on points and qualify instead. Since the qualification status could change dramatically with just one goal, this scenario is marked as having maximum suspense (suspense = 1).
+
+  Another example can be drawn from Group A of Euro 2024. In the final matchday, Hungary scored in the 100th minute against Scotland, winning the match 1–0. At that point, this late goal put Hungary at 3 points with a goal difference of -3, making them temporarily one of the best third-placed teams, and therefore potentially qualifying for the knockout stage.
+
+It seems reasonable to assume that before Hungary's goal, the level of suspense was already quite high, as both Hungary and Scotland still had hopes of qualifying as one of the best third-placed teams. A goal from either side could have shifted the standings and affected the third-place rankings across groups.
+
+  At the time of Hungary’s goal, the four best third-placed teams included Hungary, while Albania (Group B) and Czech Republic (Group F) were the ones excluded. However, by the end of the group stage, Georgia (Group F) would overtake Hungary, qualifying instead and eliminating Hungary. This is a posterior development that is not considered in the real-time suspense calculation for Group A. Suspense is evaluated based on the uncertainty during the match, not on outcomes from matches that are played later.
 
 A full explanation of how suspense has been formally defined can be found in [`suspense.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/suspense.docx)
 ## Data

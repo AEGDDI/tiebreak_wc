@@ -15,7 +15,7 @@ By applying both rule sets to historical group stage data, the paper investigate
 
 Suspense is defined as the proximity to a potential change in the composition of teams qualifying for the knockout stage. More precisely:
 
-> *A suspenseful moment occurs when a single goal (in any group match) could alter the current qualification outcome.*
+> *A suspenseful moment occurs when a single goal in a group could alter the composition of teams qualifying to the elimination stage.*
 
 For example, in Group F of Euro 2024, entering the third and final matchday, Portugal and Turkey were in qualifying positions for the knockout stage. However, Turkey was playing against Czech Republic, and the match started 0–0. In that situation, a single goal by Czech Republic would have allowed them to overtake Turkey on points and qualify instead. Since the qualification status could change dramatically with just one goal, this scenario is marked as having maximum suspense (suspense = 1).
 

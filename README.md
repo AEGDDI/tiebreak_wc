@@ -43,4 +43,46 @@ Data sources include both **Wikipedia** and **Kaggle**.
 - `data/in/`: Raw match data and Elo ratings
 - `data/out/`: Processed group dynamics data for suspense analysis
 
+## Results
+
+### Correlation Analysis
+
+We computed pairwise correlations between the following group-level metrics:
+
+- `elo_std`: the standard deviation of Elo ratings within each group (a proxy for competitive imbalance),
+- `avg_qual_count`: average number of changes in the composition of teams qualifying for the elimination stage,
+- `avg_suspense`: average suspense in a group
+
+**Key insights from the correlation analysis include:**
+
+- **Qualification Dynamics Drive Suspense**  
+  Across datasets, the **number of changes in qualifying teams (`avg_qual_count`) shows a consistent positive correlation with suspense**, especially in **FIFA World Cups**
+- **Elo Imbalance Affects Suspense Differently**  
+  - In the **European Championships**, particularly with **minute-by-minute (MBM)** data, **Elo imbalance (`elo_std`) appears weakly or not correlated** with suspense.
+  - In contrast, for **FIFA World Cups**, **higher Elo imbalance correlates negatively with suspense**: **more balanced groups tend to yield higher suspense**.
+
+- **MBM Data Is More Conservative**  
+  The **MBM (minute-by-minute)** datasets show **similar or slightly lower correlations** compared to goal-based summaries.  
+  This may be due to the inclusion of many zero-change minutes, which naturally dilute variation in suspense metrics.
+
+### Statistical Tests: FIFA vs UEFA
+
+We applied **paired t-tests** and **Wilcoxon signed-rank tests** to assess whether average qualification dynamics and suspense levels differ under FIFA and UEFA tie-breaking criteria.
+
+#### European Championships
+
+- **Suspense**: Significant difference detected (1% level).  
+  → FIFA and UEFA rules yield **different suspense dynamics**.
+  → FIFA rules generate more suspense than UEFA rules in the European Championships.
+- **Qualification Count**: Weak evidence of difference (10% level).  
+
+
+#### World Cups
+
+- **No significant differences** were found in either metric.  
+  → FIFA and UEFA tiebreak rules behave **similarly**.
+
+These results indicate that **tie-breaking rules have a more pronounced effect in the European Championships** than in the World Cup.
+
+
 

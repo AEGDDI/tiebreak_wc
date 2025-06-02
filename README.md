@@ -84,5 +84,6 @@ We applied **paired t-tests** and **Wilcoxon signed-rank tests** to assess wheth
 
 These results indicate that **tie-breaking rules have a more pronounced effect in the European Championships** than in the World Cup.
 
-
-
+For a full overview of the statistical results and correlations, see: 
+- [`corrs.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/tables/corrs.docx)
+- [`tests.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/tables/tests.docx)

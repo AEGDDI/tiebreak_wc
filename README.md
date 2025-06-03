@@ -76,11 +76,16 @@ We applied **paired t-tests** and **Wilcoxon signed-rank tests** to assess wheth
   → FIFA rules generate more suspense than UEFA rules in the European Championships.
 - **Qualification Count**: Weak evidence of difference (10% level).  
 
+![Suspense trajectory](png/eu_suspense.png)
+
 
 #### World Cups
 
 - **No significant differences** were found in either metric.  
   → FIFA and UEFA tiebreak rules behave **similarly**.
+
+![Suspense trajectory](png/wc_suspense.png)
+
 
 These results indicate that **tie-breaking rules have a more pronounced effect in the European Championships** than in the World Cup.
 

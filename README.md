@@ -38,6 +38,15 @@ Data sources include both **Wikipedia** and **Kaggle**.
 - [`data/in/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/in): This folder contains raw data on goals scored during group stage matches in both the UEFA European Championships and FIFA World Cups, along with the **Elo ratings** of the teams, **bookings**, and ** substitutions**.
 - [`data/out/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/out/wiki): This folder contains processed datasets built to evaluate minute-by-minute group composition and the potential for changes in qualification, according to both FIFA and UEFA tie-breaking criteria.
 
+  ### Bookings and Substitutions
+
+I have incorporated the dynamic impact of bookings and substitutions on match outcome probabilities, following the framework introduced by [`Titman et al. (2015)`](https://github.com/AEGDDI/tiebreak_wc/tree/main/literature%20review/titman2015joint.pdf).
+
+Specifically, yellow cards, straight red cards, red cards from second yellows, and team substitutions are all integrated into the real-time adjustment of Elo-based win/draw/loss probabilities. These adjustments capture behavioral shifts (e.g., increased caution or aggression) and changes in team strength.
+
+The logic reflects both escalation effects (e.g., retaliatory behavior after bookings) and scoreline-dependent modulation, as detailed in the paper’s survival model using Weibull distribution.
+
+
 ## Repository Structure
 
 - `data/in/`: Raw match data, Elo ratings, bookings, and subsitituions. 
@@ -92,3 +101,4 @@ These results indicate that **tie-breaking rules have a more pronounced effect i
 For a full overview of the statistical results and correlations, see: 
 - [`corrs.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/tables/corrs.docx)
 - [`tests.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/tables/tests.docx)
+

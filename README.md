@@ -35,12 +35,12 @@ We collected and processed data from:
 
 Data sources include both **Wikipedia** and **Kaggle**.
 
-- [`data/in/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/in): This folder contains raw data on goals scored during group stage matches in both the UEFA European Championships and FIFA World Cups, along with the **Elo ratings** of the national teams.
+- [`data/in/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/in): This folder contains raw data on goals scored during group stage matches in both the UEFA European Championships and FIFA World Cups, along with the **Elo ratings** of the teams, **bookings**, and ** substitutions**.
 - [`data/out/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/out/wiki): This folder contains processed datasets built to evaluate minute-by-minute group composition and the potential for changes in qualification, according to both FIFA and UEFA tie-breaking criteria.
 
 ## Repository Structure
 
-- `data/in/`: Raw match data and Elo ratings
+- `data/in/`: Raw match data, Elo ratings, bookings, and subsitituions. 
 - `data/out/`: Processed group dynamics data for suspense analysis
 
 ## Results

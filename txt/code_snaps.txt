@@ -1,0 +1,163 @@
+import numpy as np
+import pandas as pd
+
+def _adjust_group_motivation(row, boost=0.20, gamma=0.7):
+    """
+    Row-wise tilt: if suspense_group==1 and
+      - third_qualify==0 -> 3rd team is out (motivated). Favor its win prob.
+      - third_qualify==1 -> 4th team is out (motivated). Favor its win prob.
+    Keeps probabilities valid.
+    """
+    ph = row.get('P_home')
+    pd_ = row.get('P_draw')
+    pa = row.get('P_away')
+
+    if any(x is None or (isinstance(x, float) and np.isnan(x)) for x in [ph, pd_, pa]):
+        return ph, pd_, pa  # return baseline if missing
+
+    p = np.array([ph, pd_, pa], dtype=float)
+    p = np.clip(p, 1e-12, 1.0)
+    p /= p.sum()
+
+    if int(row.get('suspense_group', 0)) != 1:
+        return p[0], p[1], p[2]
+
+    # who is the "bubble" team?
+    motivated = None
+    if row.get('third_qualify') == 0:
+        motivated = row.get('3rd')
+    elif row.get('third_qualify') == 1:
+        motivated = row.get('4th')
+
+    favor_idx = None
+    if isinstance(motivated, str):
+        if motivated == row.get('home_team'):
+            favor_idx = 0
+        elif motivated == row.get('away_team'):
+            favor_idx = 2
+
+    if favor_idx is None:
+        return p[0], p[1], p[2]
+
+    # softmax tilt: push win up, loss down (draw neutral)
+    direction = np.array([+1.0, 0.0, -1.0]) if favor_idx == 0 else np.array([-1.0, 0.0, +1.0])
+    weights = np.exp(gamma * boost * direction)
+    p_tilt = p * weights
+    p_tilt /= p_tilt.sum()
+    return p_tilt[0], p_tilt[1], p_tilt[2]
+
+
+def _compute_sss_from_adjusted(curr_vec, prev_vec, lam=1.0):
+    """
+    curr_vec, prev_vec: length-3 arrays (P_home_adj, P_draw_adj, P_away_adj).
+    suspense uses your SUM definition scaled by lam.
+    """
+    curr = np.asarray(curr_vec, dtype=float)
+    prev = np.asarray(prev_vec, dtype=float)
+
+    dP = curr - prev
+    surprise = float(np.abs(dP).sum())
+    shock    = float(np.abs(dP).max())
+
+    # your original SUM form:
+    suspense = float(lam * ((curr[0]*(1-curr[0])) + (curr[1]*(1-curr[1])) + (curr[2]*(1-curr[2]))))
+
+    return {
+        'dP_home_adj': dP[0],
+        'dP_draw_adj': dP[1],
+        'dP_away_adj': dP[2],
+        'surprise_adj': surprise,
+        'shock_adj': shock,
+        'suspense_adj': suspense,
+    }
+
+
+def update_probs_and_sss(
+    merged_df: pd.DataFrame,
+    boost: float = 0.20,
+    gamma: float = 0.7,
+    lam_value: float = None,
+    lam_col: str = None,
+):
+    """
+    Update probabilities and SSS using the group-motivation logic.
+
+    Inputs
+    ------
+    merged_df : DataFrame containing at least:
+        ['year','stage','home_team','away_team','goal_minute',
+         'P_home','P_draw','P_away','suspense_group','third_qualify','3rd','4th']
+        (plus optional lam column if lam_col is provided)
+    boost, gamma : tilt parameters for the motivation effect.
+    lam_value : if provided, use this constant lam everywhere.
+    lam_col   : if provided, read lam per-row from merged_df[lam_col].
+                If both are None, lam defaults to 1.0.
+
+    Returns
+    -------
+    DataFrame with added columns:
+        ['P_home_adj','P_draw_adj','P_away_adj',
+         'dP_home_adj','dP_draw_adj','dP_away_adj',
+         'surprise_adj','shock_adj','suspense_adj']
+    """
+    df = merged_df.copy()
+
+    # process match-by-match, minute order
+    key_cols = ['year', 'stage', 'home_team', 'away_team']
+    out = []
+
+    for _, match in df.sort_values('goal_minute').groupby(key_cols, sort=False):
+        match = match.sort_values('goal_minute').copy()
+
+        # minute 0 (or first row) — compute adjusted start probs
+        ph0, pd0, pa0 = _adjust_group_motivation(match.iloc[0], boost=boost, gamma=gamma)
+        match.loc[match.index[0], 'P_home_adj'] = ph0
+        match.loc[match.index[0], 'P_draw_adj'] = pd0
+        match.loc[match.index[0], 'P_away_adj'] = pa0
+
+        lam0 = (
+            float(match.iloc[0][lam_col]) if (lam_col and lam_col in match.columns) else
+            (float(lam_value) if lam_value is not None else 1.0)
+        )
+        sss0 = _compute_sss_from_adjusted([ph0, pd0, pa0], [ph0, pd0, pa0], lam=lam0)
+        for k, v in sss0.items():
+            match.loc[match.index[0], k] = v
+
+        prev_vec = np.array([ph0, pd0, pa0], dtype=float)
+
+        # subsequent rows
+        for ridx in match.index[1:]:
+            row = match.loc[ridx]
+            ph, pd_, pa = _adjust_group_motivation(row, boost=boost, gamma=gamma)
+            match.loc[ridx, 'P_home_adj'] = ph
+            match.loc[ridx, 'P_draw_adj'] = pd_
+            match.loc[ridx, 'P_away_adj'] = pa
+
+            lam_here = (
+                float(row[lam_col]) if (lam_col and lam_col in match.columns) else
+                (float(lam_value) if lam_value is not None else 1.0)
+            )
+
+            sss = _compute_sss_from_adjusted([ph, pd_, pa], prev_vec, lam=lam_here)
+            for k, v in sss.items():
+                match.loc[ridx, k] = v
+
+            prev_vec = np.array([ph, pd_, pa], dtype=float)
+
+        out.append(match)
+
+    return pd.concat(out, ignore_index=True)
+
+
+
+------------- IMPLEMENT CODE -----------------
+
+# Minimal use (no external λ): lam defaults to 1.0
+merged_updated = update_probs_and_sss(merged_df)
+
+# If you have a per-row lambda column (e.g., 'lam'):
+merged_updated = update_probs_and_sss(merged_df, lam_col='lam')
+
+# Or a constant scaler for this run:
+merged_updated = update_probs_and_sss(merged_df, lam_value=0.013)
+

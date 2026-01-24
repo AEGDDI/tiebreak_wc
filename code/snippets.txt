@@ -1,0 +1,5 @@
+# Mark teams tied ONLY if equal on points, GD, and goals scored
+group_goals_tracking['tied'] = group_goals_tracking.duplicated(
+    ['total_points', 'total_goals_difference', 'total_goals_scored'],
+    keep=False
+) 

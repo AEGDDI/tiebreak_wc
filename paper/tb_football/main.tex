@@ -222,15 +222,48 @@ Overall, the European Championship indicates that suspense is primarily related 
 
 \subsection{Regression Analysis}
 
-To examine whether the FIFA rule advantage in suspense depends on competitive balance, we estimate three specifications. \textit{Spec~1} is a group-level paired OLS regression in which the dependent variable is the within-group difference in mean suspense between FIFA and UEFA rules ($\Delta\overline{\text{suspense}}_g = \overline{\text{suspense}}^{\text{FIFA}}_g - \overline{\text{suspense}}^{\text{UEFA}}_g$), regressed on the standard deviation of Elo ratings within the group (\textit{Elo std}), which proxies for competitive imbalance. Spec~1b adds year fixed effects to absorb tournament-level trends. \textit{Spec~2} is a minute-by-minute linear probability model (LPM) in which the outcome is the binary suspense indicator. FIFA and UEFA observations for each group are stacked and the key regressor is a dummy for the FIFA rule (\textit{FIFA\_rule}), with controls for match time (minute and its square), within-match quality imbalance (\textit{Elo diff}), and year fixed effects. Standard errors are clustered at the group (year $\times$ stage) level to account for within-group correlation across minutes. \textit{Spec~3} extends Spec~2 by adding the group-level \textit{Elo std} and its interaction with \textit{FIFA\_rule}, allowing the rule effect to vary with competitive balance.
+We estimate three specifications to test whether the FIFA rule generates more suspense and whether that advantage varies with competitive balance.
+
+\paragraph{Spec 1 — Group-level paired OLS (Table~\ref{tab:regression_grp}).}
+The unit of observation is a group $g$ (year $\times$ stage). For each group we observe mean suspense under both rules, so the dependent variable is the within-group difference:
+\[
+\Delta\overline{\text{suspense}}_g
+  = \overline{\text{suspense}}^{\,\text{FIFA}}_g - \overline{\text{suspense}}^{\,\text{UEFA}}_g
+  = \alpha + \beta\,\textit{Elo\_std}_g + \varepsilon_g
+\]
+where \textit{Elo\_std} is the standard deviation of Elo ratings across the four teams in group $g$, proxying for competitive imbalance. Spec~1b adds year fixed effects to absorb tournament-level trends. Standard errors are HC1 robust.
+
+\paragraph{Spec 2 — Minute-by-minute LPM (Table~\ref{tab:regression_mbm}).}
+The unit of observation is a match-minute $t$ in match $m$ of group $g$. FIFA and UEFA observations for the same group are stacked, so identification comes from within-group variation across rules:
+\[
+\textit{suspense}_{gmt}
+  = \alpha + \beta\,\textit{FIFA\_rule}_{gm}
+  + \gamma\,t + \delta\,t^2
+  + \lambda\,\textit{Elo\_diff}_{gm}
+  + \mu_y + \varepsilon_{gmt}
+\]
+where \textit{FIFA\_rule} is a dummy equal to 1 for FIFA-rule observations, $t$ and $t^2$ capture the non-linear within-match time trend, \textit{Elo\_diff} controls for match-level quality imbalance, and $\mu_y$ are year fixed effects. Standard errors are clustered at the group level.
+
+\paragraph{Spec 3 — Heterogeneous effects by competitive balance (Table~\ref{tab:regression_mbm}).}
+Spec~2 is extended with the group-level \textit{Elo\_std} and its interaction with the rule dummy, allowing the FIFA advantage to vary with how balanced the group is:
+\[
+\textit{suspense}_{gmt}
+  = \alpha + \beta\,\textit{FIFA\_rule}_{gm}
+  + \gamma\,t + \delta\,t^2
+  + \lambda\,\textit{Elo\_diff}_{gm}
+  + \theta\,\textit{Elo\_std}_g
+  + \phi\,(\textit{FIFA\_rule}_{gm} \times \textit{Elo\_std}_g)
+  + \mu_y + \varepsilon_{gmt}
+\]
+The coefficient $\phi$ tests whether the rule effect $\beta$ grows or shrinks in more unequal groups. The main effect $\theta$ must be included whenever the interaction is present to avoid misspecification.
 
 \input{tables/reg_grp}
 
-Table~\ref{tab:regression_grp} reports the group-level paired regressions. The coefficient on \textit{Elo std} is negative in all four specifications but statistically indistinguishable from zero for both the European Championship and the World Cup, with and without year fixed effects. This implies that the advantage of the FIFA rule over the UEFA rule in generating suspense is not meaningfully shaped by how balanced the group is: groups with similar Elo ratings and groups with a dominant team show roughly the same FIFA-minus-UEFA suspense gap.
+Table~\ref{tab:regression_grp} reports the Spec~1 estimates. The coefficient on \textit{Elo std} is negative in all four columns but statistically indistinguishable from zero for both the European Championship and the World Cup, with and without year fixed effects. This implies that the advantage of the FIFA rule in generating suspense is not meaningfully shaped by competitive balance: groups with similar Elo ratings and groups with a dominant team show roughly the same FIFA-minus-UEFA suspense gap.
 
 \input{tables/reg_mbm}
 
-Table~\ref{tab:regression_mbm} reports the minute-by-minute LPM estimates. In the European Championship (Spec~2), the coefficient on \textit{FIFA\_rule} is positive but small and statistically insignificant (0.009, SE 0.021), consistent with the earlier finding that the rule difference does not generate a robust suspense premium in that competition. In the World Cup, by contrast, \textit{FIFA\_rule} is positive and highly significant: a matchday-3 minute played under FIFA rules is associated with a 4.3 percentage point higher probability of being a suspenseful moment (SE 0.016, $p<0.01$). When group-level competitive balance is added in Spec~3, the pattern sharpens: the FIFA coefficient in the World Cup rises to 7.2 percentage points (SE 0.032, $p<0.05$), while \textit{Elo std} itself enters negatively and significantly ($-$0.003, SE 0.001, $p<0.05$), confirming that more unequal groups generate less suspense on average — in line with the correlation analysis. Crucially, the interaction \textit{FIFA $\times$ Elo std} is statistically insignificant in both competitions, echoing the group-level result: the FIFA rule does not produce a larger or smaller suspense advantage in balanced versus unbalanced groups. Minute and its square enter with the expected negative sign in the World Cup, indicating that suspense declines as the match approaches its end.
+Table~\ref{tab:regression_mbm} reports the Spec~2 and Spec~3 estimates. In the European Championship, the coefficient on \textit{FIFA\_rule} is positive but small and statistically insignificant in both specifications (0.009 in Spec~2, 0.025 in Spec~3), consistent with the earlier finding that the rule difference does not generate a robust suspense premium in that competition. In the World Cup, by contrast, \textit{FIFA\_rule} is positive and highly significant in Spec~2: a matchday-3 minute played under FIFA rules is associated with a 4.3 percentage point higher probability of being a suspenseful moment ($p<0.01$). When group-level competitive balance is added in Spec~3, the FIFA coefficient rises to 7.2 percentage points ($p<0.05$), while \textit{Elo std} itself enters negatively and significantly ($-$0.003, $p<0.05$), confirming that more unequal groups generate less suspense on average — consistent with the correlation analysis. Crucially, the interaction \textit{FIFA $\times$ Elo std} is statistically insignificant in both competitions, echoing the Spec~1 result: the FIFA rule does not produce a larger or smaller suspense advantage in balanced versus unbalanced groups.
 
 Taken together, the regression evidence corroborates the descriptive and test-based findings: the FIFA goal-difference criterion generates more group-level suspense than the UEFA head-to-head criterion, and this effect is driven by the World Cup rather than the European Championship. The gain from adopting FIFA rules is uniform across the distribution of competitive balance, suggesting it is the structural feature of the rule — not a particular type of group draw — that drives the difference.
 

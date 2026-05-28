@@ -231,7 +231,7 @@ The unit of observation is a group $g$ (year $\times$ stage). For each group we 
   = \overline{\text{suspense}}^{\,\text{FIFA}}_g - \overline{\text{suspense}}^{\,\text{UEFA}}_g
   = \alpha + \beta\,\textit{Elo\_std}_g + \varepsilon_g
 \]
-where \textit{Elo\_std} is the standard deviation of Elo ratings across the four teams in group $g$, proxying for competitive imbalance. Spec~1b adds year fixed effects to absorb tournament-level trends. Standard errors are HC1 robust.
+where \textit{Elo\_std} is the standard deviation of Elo ratings across the four teams in group $g$, proxying for competitive imbalance. Spec~1b adds year fixed effects to absorb tournament-level trends. Standard errors are HC1  \footnote{HC1 robust standard errors are used to prevent heteroskedasticity arising from variation in competitive balance across groups, since groups with very different Elo dispersions may show systematically different variances in the suspense gap.}.
 
 \paragraph{Spec 2 — Minute-by-minute LPM (Table~\ref{tab:regression_mbm}).}
 The unit of observation is a match-minute $t$ in match $m$ of group $g$. FIFA and UEFA observations for the same group are stacked, so identification comes from within-group variation across rules:

@@ -1,0 +1,29 @@
+\begin{table}[H]
+\centering
+\small
+\caption{Differences between UEFA and FIFA tiebreak rules: mean differences and statistical tests}
+\label{tab:tests_diff}
+\begin{threeparttable}
+\begin{tabular}{lcc}
+\toprule
+\multicolumn{3}{c}{\textbf{European Championship}} \\
+\midrule
+\textbf{Metric} & Mean Diff. & p-value \\
+\midrule
+Qualification Count & -0.423 & 0.191 (t-test), 0.25 (Wilcoxon) \\
+Suspense            & -0.060 & 0.409 (t-test), 0.496 (Wilcoxon) \\
+\midrule
+\multicolumn{3}{c}{\textbf{World Cup}} \\
+\midrule
+\textbf{Metric} & Mean Diff. & p-value \\
+\midrule
+Qualification Count & -0.079 & 0.544 (t-test), 0.622 (Wilcoxon) \\
+Suspense            & -0.264 & 0.000 (t-test), 0.000 (Wilcoxon) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\small
+\textit{Note:} Reported values are mean differences computed as UEFA $-$ FIFA. Both paired t-tests and Wilcoxon signed-rank tests are reported: the t-test evaluates differences in means under approximate normality, while the Wilcoxon test provides a non-parametric robustness check.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

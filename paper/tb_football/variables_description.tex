@@ -1,0 +1,332 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\setstretch{1.1}
+
+\title{Variables Description}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\section*{mbm and goals datasets}
+
+The first table describes the variables included in the goal-level datasets (mbm and goals).
+
+\bigskip
+
+\begin{longtable}{p{4cm} p{11cm}}
+\caption{Description of variables in the goal-level datasets}
+\label{tab:variables_description_goal} \\
+\toprule
+\textbf{Variable name} & \textbf{Description} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Variable name} & \textbf{Description} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{2}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+year &
+Year in which the match took place. \\
+
+stage &
+Group stage from A to H. 8 Groups \\
+
+date &
+Calendar date on which the match was played. \\
+
+time &
+Kick-off time of the match. \\
+
+goal\_minute &
+Minute of the match in which the goal was scored. \\
+
+half\_time &
+Dummy variable equal to 0 if the match was not started yet, 1 if the goal was scored in the first half, and 2 if scored in the second half. \\
+
+home\_team &
+Name of the home team. \\
+
+away\_team &
+Name of the away team. \\
+
+scorer\_team &
+Team that scored the goal (home or away). \\
+
+new\_top\_teams &
+list of teams who qualify to the knockout stage once the goal is scored\\
+
+1st &
+Team ranked first in the group immediately after the goal. \\
+
+1st\_points &
+Number of points held by the first-ranked team after the goal. \\
+
+1st\_goals\_diff &
+Goal difference of the first-ranked team after the goal. \\
+
+1st\_goals\_scored &
+Total goals scored by the first-ranked team after the goal. \\
+
+1st\_last\_game\_points &
+Points obtained by the first-ranked team in its current match. \\
+
+1st\_last\_game\_goals\_diff &
+Goal difference recorded by the first-ranked team in its current match. \\
+
+2nd &
+Team ranked second in the group immediately after the goal. \\
+
+2nd\_points &
+Number of points held by the second-ranked team after the goal. \\
+
+2nd\_goals\_diff &
+Goal difference of the second-ranked team after the goal. \\
+
+2nd\_goals\_scored &
+Total goals scored by the second-ranked team after the goal. \\
+
+2nd\_last\_game\_points &
+Points obtained by the second-ranked team in its current match. \\
+
+2nd\_last\_game\_goals\_diff &
+Goal difference recorded by the second-ranked team in its current match. \\
+
+3rd &
+Team ranked third in the group immediately after the goal. \\
+
+3rd\_points &
+Number of points held by the third-ranked team after the goal. \\
+
+3rd\_goals\_diff &
+Goal difference of the third-ranked team after the goal. \\
+
+3rd\_goals\_scored &
+Total goals scored by the third-ranked team after the goal. \\
+
+3rd\_last\_game\_points &
+Points obtained by the third-ranked team in its current match. \\
+
+3rd\_last\_game\_goals\_diff &
+Goal difference recorded by the third-ranked team in its current match. \\
+
+4th &
+Team ranked fourth in the group immediately after the goal. \\
+
+4th\_points &
+Number of points held by the fourth-ranked team after the goal. \\
+
+4th\_goals\_diff &
+Goal difference of the fourth-ranked team after the goal. \\
+
+4th\_goals\_scored &
+Total goals scored by the fourth-ranked team after the goal. \\
+
+4th\_last\_game\_points &
+Points obtained by the fourth-ranked team in its current match. \\
+
+4th\_last\_game\_goals\_diff &
+Goal difference recorded by the fourth-ranked team in its current match. \\
+
+third\_qualify &
+Dummy variable equal to 1 if the third-ranked team qualifies for the next stage, 0 otherwise. \\
+
+qualified\_teams &
+List of teams qualifying from the group to the next stage. \\
+
+qual\_changed &
+Dummy variable equal to 1 if the set of qualified teams changes as a consequence of the goal, 0 otherwise. \\
+
+qual\_count &
+Track of how many time the composition of qualified teams has changed in the group. \\
+
+pts\_diff &
+Points difference between the first non-qualified team  and the last qualified team after the goal. \\
+
+gls\_diff &
+Goals difference between the first non-qualified team  and the last qualified team after the goal. \\
+
+elo\_home &
+Elo rating of the home team prior to the match. \\
+
+elo\_away &
+Elo rating of the away team prior to the match. \\
+
+h2h &
+It takes value 1 if the current match is exactly between teams whose direct confrontation is decisive for qualification at that moment, 0 otherwise. \\
+
+suspense &
+It takes value 1 if it is a moment of suspense as defined \href{https://github.com/AEGDDI/tiebreak_wc}{here} \\
+
+\end{longtable}
+
+\section*{third teams}
+
+This table refers to all third\_teams datasets
+
+\bigskip
+
+
+\begin{longtable}{p{4cm} p{11cm}}
+\caption{Description of group-level qualification state variables}
+\label{tab:variables_group_state} \\
+\toprule
+\textbf{Variable name} & \textbf{Description} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Variable name} & \textbf{Description} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{2}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+year & Year in which the tournament took place. \\
+
+
+date & Calendar date of the match. \\
+
+
+time & Kick-off time of the match. \\
+
+
+goal\_minute & Minute at which the goal was scored. \\
+
+
+half\_time & Dummy equal to 1 if the observation refers to the first half, 2 to the second. \\
+
+
+stage & Group stage from A to H. 8 Groups  \\
+
+
+Group A & Ranking configuration of Group A at the time of the goal. In the list the first value is the team's name, followed by its total points, total goals difference, and total goals scored. The same stands for all other groups \\
+
+
+Group B & Ranking configuration of Group B at the time of the goal. \\
+
+
+Group C & Ranking configuration of Group C at the time of the goal. \\
+
+
+Group D & Ranking configuration of Group D at the time of the goal. \\
+
+
+Group E & Ranking configuration of Group E at the time of the goal. \\
+
+
+Group F & Ranking configuration of Group F at the time of the goal. \\
+
+
+top\_four & Set of teams currently ranked in the top four positions. \\
+
+
+last\_two & Set of teams currently ranked in the last two positions. \\
+
+
+tied\_teams & Set of teams tied at the qualification margin. \\
+
+
+change\_flag & Dummy equal to 1 if the composition of third teams changed, 0 otherwise. \\
+
+change\_count & It keeps track of the time the composition of third teams changed in the competition. \\
+\end{longtable}
+
+\section*{tables probabilities}
+
+This table refers to all tab\_prob
+\bigskip
+
+\begin{longtable}{p{4cm} p{11cm}}
+\caption{Description of probability-based surprise and suspense variables}
+\label{tab:variables_probabilities} \\
+\toprule
+\textbf{Variable name} & \textbf{Description} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Variable name} & \textbf{Description} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{2}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+year & Year in which the match took place. \\
+
+
+stage & Group stage from A to H. 8 Groups \\
+
+
+home\_team & Name of the home team. \\
+
+
+away\_team & Name of the away team. \\
+
+
+minute & Minute of the match at which the event occurs. \\
+
+
+score\_home & Number of goals scored by the home team at that minute. \\
+
+
+score\_away & Number of goals scored by the away team at that minute. \\
+
+
+P\_home & Model-implied probability of a home win after the event. \\
+
+P\_draw & Model-implied probability of a draw after the event. 
+
+
+P\_away & Model-implied probability of an away win after the event. \\
+
+
+dP\_home & Change in the probability of a home win relative to the previous minute. \\
+
+
+dP\_draw & Change in the probability of a draw relative to the previous minute. \\
+
+
+dP\_away & Change in the probability of an away win relative to the previous minute. \\
+
+
+shock & Maximum absolute change among $|dP_\text{home}|$, $|dP_\text{draw}|$, and $|dP_\text{away}|$. \\
+surprise & Sum of absolute probability changes: $|dP_\text{home}| + |dP_\text{draw}| + |dP_\text{away}|$. \\
+
+
+suspense & Weighted uncertainty measure computed as $\lambda \sum_j P_j(1-P_j)$, where $j \in \{\text{home}, \text{draw}, \text{away}\}$. \\
+
+
+event & Text description of the match event (e.g., start of the match, goal by home or away team). \\
+
+\end{longtable}
+
+
+\end{document}

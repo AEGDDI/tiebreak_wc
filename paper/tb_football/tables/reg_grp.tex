@@ -1,0 +1,27 @@
+
+\begin{table}[H]
+\centering
+\caption{Group-level paired regression: $\Delta\,\overline{\text{suspense}}_g = \overline{\text{suspense}}^{\text{FIFA}}_g - \overline{\text{suspense}}^{\text{UEFA}}_g$}
+\label{tab:regression_grp}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{European Championship} & \multicolumn{2}{c}{World Cup} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & (1a) & (1b) & (2a) & (2b) \\
+\midrule
+Elo std & -0.0003 & -0.0001 & -0.0005 & -0.0004 \\
+        & (0.0005) & (0.0006) & (0.0003) & (0.0003) \\
+\midrule
+Year FE & No & Yes & No & Yes \\
+N groups & 42 & 42 & 73 & 73 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item OLS with HC1 robust standard errors. All observations are from matchday 3.
+Dependent variable is the within-group difference in mean suspense (FIFA minus UEFA).
+$^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

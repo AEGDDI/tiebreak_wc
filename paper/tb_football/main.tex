@@ -180,6 +180,7 @@ Following \citet{buraimo2020unscripted}, shock is defined as the difference betw
 \text{Shock} = \max \left( \left| \Delta P_{\text{home}} \right|,\ \left| \Delta P_{\text{draw}} \right|,\ \left| \Delta P_{\text{away}} \right| \right)
 \]
 
+Since match outcomes have exactly three states (home win, draw, away win), the constraint that probabilities sum to one implies that probability gains and losses must balance, so the sum of absolute probability changes (Surprise) is always exactly twice the maximum absolute change (Shock); the two measures are therefore perfectly collinear and we report only Shock in the match-level analysis.
 
 
 
@@ -302,12 +303,6 @@ While at the group level the FIFA criteria (goal difference) generate more suspe
     \label{fig:shock}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-\includegraphics[width=1\textwidth]{images/surprise.png}
-    \caption{}
-    \label{fig:surprise}
-\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -317,11 +312,11 @@ While at the group level the FIFA criteria (goal difference) generate more suspe
 \end{figure}
 
 
-At the match level, however, as shown in Figures~\ref{fig:shock}, \ref{fig:surprise}, and \ref{fig:suspense}, UEFA’s head-to-head criteria tend to produce greater suspense, shock, and surprise, along with larger fluctuations in these measures. This may be because prioritizing direct clashes amplifies the impact of goals in decisive matches: any goal that alters the head-to-head result can drastically shift a team’s qualification prospects.
+At the match level, however, as shown in Figures~\ref{fig:shock} and \ref{fig:suspense}, UEFA’s head-to-head criteria tend to produce greater suspense, shock, and surprise, along with larger fluctuations in these measures. This may be because prioritizing direct clashes amplifies the impact of goals in decisive matches: any goal that alters the head-to-head result can drastically shift a team’s qualification prospects.
 
-Building on this point, it is worth noting that \citet{csato2023avoid} adopts a different approach to computing match probabilities. Instead of dynamically updating Elo-based win probabilities after each goal as we do, his framework derives goal expectations from Elo ratings using a Poisson model, where the expected number of goals for each team is estimated via a polynomial transformation of the Elo-derived win expectancy. To ensure comparability, we recalculated our suspense, surprise, and shock measures following this methodology. The resulting plots, reported in Figures~\ref{fig:shock_csato}, \ref{fig:surprise_csato}, and \ref{fig:suspense_csato} in the Appendix, confirm the same patterns observed in our main analysis, reinforcing the conclusion that UEFA’s head-to-head criteria amplify match-level volatility relative to FIFA’s goal-difference rule.
+Building on this point, it is worth noting that \citet{csato2023avoid} adopts a different approach to computing match probabilities. Instead of dynamically updating Elo-based win probabilities after each goal as we do, his framework derives goal expectations from Elo ratings using a Poisson model, where the expected number of goals for each team is estimated via a polynomial transformation of the Elo-derived win expectancy. To ensure comparability, we recalculated our suspense, surprise, and shock measures following this methodology. The resulting plots, reported in Figures~\ref{fig:shock_csato}, and \ref{fig:suspense_csato} in the Appendix, confirm the same patterns observed in our main analysis, reinforcing the conclusion that UEFA’s head-to-head criteria amplify match-level volatility relative to FIFA’s goal-difference rule.
 
-Furthermore, we tried to combine the match-level suspense analysis with the group-level analysis by explicitly adjusting the underlying match probabilities when the qualification race was still on at group level. Specifically, we identify whether the third- or fourth-placed team in a group is already in contention or eliminated according to our binary indicator. If the team still in contention for the qualification is involved in the ongoing match, its win probability is tilted upward while the corresponding loss probability is reduced, while the draw probability remains approximately unchanged. This adjustment reflects the intuition that teams facing elimination may display greater motivation. We then recompute suspense, surprise, and shock based on these adjusted probabilities, ensuring that goal by goal dynamics evolve in line with group qualification dynamics. In this way, our match-level measures are directly linked to the group-level suspense of the qualification race under the two tie-breaking rules. Figures~\ref{fig:shock_agg}, \ref{fig:surprise_agg}, and \ref{fig:suspense_agg} confirms that UEFA tiebreak highlight all three measure (Surprise, Shock, Suspense) even when group dynamics are taken into account.
+Furthermore, we tried to combine the match-level suspense analysis with the group-level analysis by explicitly adjusting the underlying match probabilities when the qualification race was still on at group level. Specifically, we identify whether the third- or fourth-placed team in a group is already in contention or eliminated according to our binary indicator. If the team still in contention for the qualification is involved in the ongoing match, its win probability is tilted upward while the corresponding loss probability is reduced, while the draw probability remains approximately unchanged. This adjustment reflects the intuition that teams facing elimination may display greater motivation. We then recompute suspense, surprise, and shock based on these adjusted probabilities, ensuring that goal by goal dynamics evolve in line with group qualification dynamics. In this way, our match-level measures are directly linked to the group-level suspense of the qualification race under the two tie-breaking rules. Figures~\ref{fig:shock_agg} and \ref{fig:suspense_agg} confirms that UEFA tiebreak highlight all three measure (Surprise, Shock, Suspense) even when group dynamics are taken into account.
 
 \begin{figure}[H]
     \centering
@@ -330,12 +325,6 @@ Furthermore, we tried to combine the match-level suspense analysis with the grou
     \label{fig:shock_agg}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-\includegraphics[width=1\textwidth]{images/surprise_agg.png}
-    \caption{}
-    \label{fig:surprise_agg}
-\end{figure}
 
 \begin{figure}[H]
     \centering
@@ -344,7 +333,7 @@ Furthermore, we tried to combine the match-level suspense analysis with the grou
     \label{fig:suspense_agg}
 \end{figure}
 
-
+\input{tables/reg_mbm}
 \section{Conclusion}
 \label{sec: conclusion}
 
@@ -523,12 +512,6 @@ To incorporate match dynamics and disciplinary events, we adapt the framework of
     \label{fig:shock_csato}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-\includegraphics[width=1\textwidth]{images/surprise_csato.png}
-    \caption{}
-    \label{fig:surprise_csato}
-\end{figure}
 
 \begin{figure}[H]
     \centering

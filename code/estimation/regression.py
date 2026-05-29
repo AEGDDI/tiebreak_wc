@@ -51,7 +51,7 @@ def build_df(goals_fifa, goals_uefa, label):
 
     req = ["suspense", "FIFA_rule", "minute", "minute_sq", "elo_diff", "group_id", "year"]
     n_complete = df.dropna(subset=req).shape[0]
-    print(f"\n{label}: {len(df)} rows stacked  →  {n_complete} goal events with complete data")
+    print(f"\n{label}: {len(df)} rows stacked  ->  {n_complete} goal events with complete data")
     return df
 
 

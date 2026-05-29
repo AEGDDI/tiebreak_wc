@@ -25,7 +25,7 @@ It seems reasonable to assume that before Hungary's goal, the level of suspense 
 
   At the time of Hungary’s goal, the four best third-placed teams included Hungary, while Albania (Group B) and Czech Republic (Group F) were the ones excluded. However, by the end of the group stage, Georgia (Group F) would overtake Hungary, qualifying instead and eliminating Hungary. This is a posterior development that is not considered in the real-time suspense calculation for Group A. Suspense is evaluated based on the uncertainty during the match, not on outcomes from matches that are played later.
 
-A full explanation of how suspense has been formally defined can be found in [`suspense.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/suspense.docx)
+A full explanation of how suspense has been formally defined can be found in [`suspense.docx`](https://github.com/AEGDDI/tb_football/tree/main/docx/suspense.docx)
 ## Data
 
 We collected and processed data from:
@@ -35,12 +35,12 @@ We collected and processed data from:
 
 Data sources include both **Wikipedia** and **Kaggle**.
 
-- [`data/in/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/in): This folder contains raw data on goals scored during group stage matches in both the UEFA European Championships and FIFA World Cups, along with the **Elo ratings** of the teams, **bookings**, and **substitutions**.
-- [`data/out/`](https://github.com/AEGDDI/tiebreak_wc/tree/main/data/out/wiki): This folder contains processed datasets built to evaluate minute-by-minute group composition and the potential for changes in qualification, according to both FIFA and UEFA tie-breaking criteria.
+- [`data/in/`](https://github.com/AEGDDI/tb_football/tree/main/data/in): This folder contains raw data on goals scored during group stage matches in both the UEFA European Championships and FIFA World Cups, along with the **Elo ratings** of the teams, **bookings**, and **substitutions**.
+- [`data/out/`](https://github.com/AEGDDI/tb_football/tree/main/data/out/wiki): This folder contains processed datasets built to evaluate minute-by-minute group composition and the potential for changes in qualification, according to both FIFA and UEFA tie-breaking criteria.
 
   ### Bookings and Substitutions
 
-I have incorporated the dynamic impact of bookings and substitutions on match outcome probabilities, following the framework introduced by [`Titman et al. (2015)`](https://github.com/AEGDDI/tiebreak_wc/tree/main/literature%20review/titman2015joint.pdf).
+I have incorporated the dynamic impact of bookings and substitutions on match outcome probabilities, following the framework introduced by [`Titman et al. (2015)`](https://github.com/AEGDDI/tb_football/tree/main/literature%20review/titman2015joint.pdf).
 
 Specifically, yellow cards, straight red cards, red cards from second yellows, and team substitutions are all integrated into the real-time adjustment of Elo-based win/draw/loss probabilities. These adjustments capture behavioral shifts (e.g., increased caution or aggression) and changes in team strength.
 
@@ -91,12 +91,12 @@ We applied **paired t-tests** and **Wilcoxon signed-rank tests** to assess wheth
 - **No significant differences** were found in either metric.  
   → FIFA and UEFA tiebreak rules behave **similarly**.
 
-![Suspense trajectory](https://raw.githubusercontent.com/AEGDDI/tiebreak_wc/main/png/suspense.png)
+![Suspense trajectory](https://raw.githubusercontent.com/AEGDDI/tb_football/main/png/suspense.png)
 
 
 These results indicate that **tie-breaking rules have a more pronounced effect in the European Championships** than in the World Cup.
 
 For a full overview of the statistical results and correlations, see: 
-- [`corrs.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/tables/corrs.docx)
-- [`tests.docx`](https://github.com/AEGDDI/tiebreak_wc/tree/main/docx/tables/tests.docx)
+- [`corrs.docx`](https://github.com/AEGDDI/tb_football/tree/main/docx/tables/corrs.docx)
+- [`tests.docx`](https://github.com/AEGDDI/tb_football/tree/main/docx/tables/tests.docx)
 

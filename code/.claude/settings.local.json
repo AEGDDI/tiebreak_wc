@@ -4,24 +4,24 @@
       "Bash(python -c \"import json; nb = json.load\\(open\\('wiki/functions_fifa.ipynb'\\)\\); cells = nb['cells']; matches = [i for i, cell in enumerate\\(cells\\) if 'audit_suspense0_where_4th_threatens_2nd' in str\\(cell.get\\('source', ''\\)\\)]; print\\('Cell indices:', matches\\)\")",
       "Bash(python -c \"import json; nb = json.load\\(open\\('wiki/functions_fifa.ipynb', encoding='utf-8'\\)\\); cells = nb['cells']; matches = [i for i, cell in enumerate\\(cells\\) if 'audit_suspense0_where_4th_threatens_2nd' in str\\(cell.get\\('source', ''\\)\\)]; print\\('Cell indices:', matches\\)\")",
       "Bash(python)",
-      "Bash(cd \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tiebreak_wc\\\\data\\\\out\\\\wiki\\\\men\\\\fifa\\\\eu\" *)",
-      "Read(//c/Users/aldi/Documents/GitHub/tiebreak_wc/data/out/wiki/men/fifa/eu/**)",
-      "Bash(cd \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tiebreak_wc\\\\data\\\\out\\\\wiki\\\\men\\\\uefa\\\\eu\" *)",
-      "Read(//c/Users/aldi/Documents/GitHub/tiebreak_wc/data/out/wiki/men/uefa/eu/**)",
-      "Bash(cd \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tiebreak_wc\\\\data\\\\out\\\\wiki\\\\men\\\\fifa\\\\wc\" *)",
-      "Read(//c/Users/aldi/Documents/GitHub/tiebreak_wc/data/out/wiki/men/fifa/wc/**)",
-      "Read(//c/Users/aldi/Documents/GitHub/tiebreak_wc/**)",
-      "Bash(dir \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tiebreak_wc\")",
-      "Bash(dir \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tiebreak_wc\\\\docx\")",
+      "Bash(cd \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tb_football\\\\data\\\\out\\\\wiki\\\\men\\\\fifa\\\\eu\" *)",
+      "Read(//c/Users/aldi/Documents/GitHub/tb_football/data/out/wiki/men/fifa/eu/**)",
+      "Bash(cd \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tb_football\\\\data\\\\out\\\\wiki\\\\men\\\\uefa\\\\eu\" *)",
+      "Read(//c/Users/aldi/Documents/GitHub/tb_football/data/out/wiki/men/uefa/eu/**)",
+      "Bash(cd \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tb_football\\\\data\\\\out\\\\wiki\\\\men\\\\fifa\\\\wc\" *)",
+      "Read(//c/Users/aldi/Documents/GitHub/tb_football/data/out/wiki/men/fifa/wc/**)",
+      "Read(//c/Users/aldi/Documents/GitHub/tb_football/**)",
+      "Bash(dir \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tb_football\")",
+      "Bash(dir \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tb_football\\\\docx\")",
       "Bash(python -c ' *)",
-      "Bash(mkdir \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tiebreak_wc\\\\paper\" 2>/dev/null; echo \"ok\")",
+      "Bash(mkdir \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tb_football\\\\paper\" 2>/dev/null; echo \"ok\")",
       "Bash(\"C:\\\\Program Files\\\\Python314\\\\python.exe\" estimation/regression.py)",
       "Bash(python _patch_notebook.py)",
-      "Bash(del \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tiebreak_wc\\\\code\\\\estimation\\\\_patch_notebook.py\")",
+      "Bash(del \"c:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tb_football\\\\code\\\\estimation\\\\_patch_notebook.py\")",
       "Bash(python regression.py)"
     ],
     "additionalDirectories": [
-      "c:\\Users\\aldi\\Documents\\GitHub\\tiebreak_wc"
+      "c:\\Users\\aldi\\Documents\\GitHub\\tb_football"
     ]
   }
 }

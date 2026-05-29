@@ -16,9 +16,18 @@ clear all
 set more off
 
 * ---------------------------------------------------------------------------
-* 0.  Paths  —  edit ROOT to match your machine
+* 0.  Paths
+*     Set ROOT to the repo root before running.
+*     If you open Stata from the repo root folder, uncomment Option A.
+*     Otherwise set the full path manually in Option B.
 * ---------------------------------------------------------------------------
-global ROOT "C:/Users/YOUR_USERNAME/Documents/GitHub/tiebreak_wc"
+
+* Option A — repo root is the current working directory:
+* global ROOT "`c(pwd)'"
+
+* Option B — set path manually (edit this line):
+global ROOT "C:/Users/YOUR_USERNAME/Documents/GitHub/tb_football"
+
 global DATA "$ROOT/data/out/wiki/men"
 global IN   "$ROOT/data/in"
 

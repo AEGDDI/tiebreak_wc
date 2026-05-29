@@ -163,10 +163,13 @@ foreach tournament in eu wc {
 * ===========================================================================
 * 4.  Statistical Tests
 *     Paired t-test and Wilcoxon signed-rank test on group-level means.
-*     For each group (year x stage) we compute mean suspense and mean
-*     qual_count under FIFA and under UEFA separately, then test whether the
-*     within-group difference (UEFA minus FIFA) is zero.
-*     All rows (including initial-state rows) are included in the group means.
+*     Replicates tests.ipynb exactly:
+*       1. Aggregate goals data to one row per (group, rule): mean qual_count
+*          and mean suspense. All rows (including initial-state) are included.
+*       2. Merge FIFA and UEFA aggregates on (year, stage).
+*       3. FILTER to groups where at least one metric differs between rules.
+*       4. Run paired t-test and Wilcoxon on those groups only.
+*          (Wilcoxon automatically discards zero differences.)
 * ===========================================================================
 
 di _newline "================================================================"
@@ -186,30 +189,35 @@ foreach tournament in eu wc {
         local label "World Cup"
     }
 
-    * Stack and collapse to one row per (group, rule)
+    * --- FIFA side: group-level means ---
     use "`gfifa'", clear
-    gen FIFA_rule = 1
-    tempfile fifa_side
-    save `fifa_side'
+    collapse (mean) qual_count_fifa=qual_count suspense_fifa=suspense, by(year stage)
+    tempfile agg_fifa
+    save `agg_fifa'
 
+    * --- UEFA side: group-level means ---
     use "`guefa'", clear
-    gen FIFA_rule = 0
-    append using `fifa_side'
+    collapse (mean) qual_count_uefa=qual_count suspense_uefa=suspense, by(year stage)
 
-    collapse (mean) qual_count suspense, by(year stage FIFA_rule)
+    * --- Merge on (year, stage) ---
+    merge 1:1 year stage using `agg_fifa', nogen
 
-    * Reshape wide so each group occupies one row
-    reshape wide qual_count suspense, i(year stage) j(FIFA_rule)
-    * qual_count0 = UEFA mean, qual_count1 = FIFA mean (same for suspense)
+    count
+    di "`label': `r(N)' groups total"
 
-    gen diff_qual = qual_count0 - qual_count1   // UEFA - FIFA
-    gen diff_susp = suspense0   - suspense1      // UEFA - FIFA
+    gen diff_qual = qual_count_uefa - qual_count_fifa
+    gen diff_susp = suspense_uefa   - suspense_fifa
+
+    count
+    di "`label': `r(N)' groups (full sample)"
 
     di _newline "=== `label' — Qualification Count (UEFA - FIFA) ==="
+    sum diff_qual
     ttest diff_qual == 0
     signrank diff_qual = 0
 
     di _newline "=== `label' — Suspense (UEFA - FIFA) ==="
+    sum diff_susp
     ttest diff_susp == 0
     signrank diff_susp = 0
 }

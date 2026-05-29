@@ -48,9 +48,9 @@ data/out/wiki/men/ Processed matchday-3 datasets (goals and minute-by-minute)
 
 The regression stacks FIFA and UEFA observations for each group so that identification comes from within-group variation across rule regimes. We estimate a **goal-level linear probability model (LPM)**:
 
-$$\text{suspense}_{gmk} = \alpha + \beta\,\text{FIFA\_rule}_{gm} + \gamma\,t_k + \delta\,t_k^2 + \lambda\,\text{Elo\_diff}_{gmk} + \mu_y + \varepsilon_{gmk}$$
+$$\textit{suspense}_{gmk} = \alpha + \beta\,\textit{FIFA}_{gm} + \gamma\,t_k + \delta\,t_k^2 + \lambda\,\textit{EloDiff}_{gmk} + \mu_y + \varepsilon_{gmk}$$
 
-where $k$ indexes goals, $t_k$ is the goal minute, and standard errors are clustered at the group (year $\times$ stage) level.
+where $k$ indexes goals within match $m$ of group $g$, $\textit{FIFA}_{gm}$ is a dummy equal to 1 for FIFA-rule observations, $t_k$ is the goal minute, $\textit{EloDiff}_{gmk}$ is the absolute Elo rating difference between the two teams, and $\mu_y$ are year fixed effects. Standard errors are clustered at the group (year $\times$ stage) level.
 
 A second specification adds group-level Elo standard deviation and its interaction with the rule dummy to test whether the FIFA advantage varies with competitive balance — it does not ($p > 0.10$).
 
@@ -63,7 +63,7 @@ A second specification adds group-level Elo standard deviation and its interacti
 | Suspense diff (UEFA − FIFA) | −0.015 | **−0.040** |
 | t-test p-value | 0.389 | **0.008** |
 | Wilcoxon p-value | 0.438 | **0.010** |
-| FIFA\_rule coef (Spec 1) | 0.009 (n.s.) | **0.042***  |
+| FIFA rule coef (Spec 1) | 0.009 (n.s.) | **0.042\*\*\*** |
 | N groups | 44 | 74 |
 
 FIFA rules generate more suspense in the World Cup across all tests. The effect is both statistically significant and stable over the 90 minutes of play: unlike under UEFA rules — where uncertainty tends to concentrate in the closing stages — FIFA rules keep the qualification race open throughout the match.

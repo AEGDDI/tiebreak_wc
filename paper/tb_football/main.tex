@@ -44,7 +44,7 @@ In this paper, we investigate how alternative tie-breaking rules influence the l
 
 \vspace{0.5em}
 
-The structure of the paper is as follows. Section~\ref{sec:literature} reviews the relevant literature. Section~\ref{sec:data} presents the data, while Section~\ref{sec:estimation} outlines the methodological framework. Section~\ref{sec:results} reports the results, and Section~\ref{sec:conclusion} concludes. Additional analyses -including correlation tables, the group-level paired regression, European Championship trajectories, and match-level suspense measures - can be found in the Appendix.
+The structure of the paper is as follows. Section~\ref{sec:literature} reviews the relevant literature. Section~\ref{sec:data} presents the data, while Section~\ref{sec:estimation} outlines the methodological framework. Section~\ref{sec:results} reports the results, and Section~\ref{sec:conclusion} concludes. Additional analyses — including correlation tables, suspense trajectories by group type, and match-level suspense measures — can be found in the Appendix.
 
 \section{Literature Review}
 \label{sec:literature}
@@ -164,18 +164,9 @@ This pattern is consistent with \citet{csato2023avoid}, who, analysing the 2022/
 
 \subsection{Regression Analysis}
 
-We estimate three specifications to test whether the FIFA rule generates more suspense and whether that advantage varies with competitive balance.
+We estimate two specifications to test whether the FIFA rule generates more suspense and whether that advantage varies with competitive balance.
 
-\paragraph{Spec 1 — Group-level paired OLS (Table~\ref{tab:regression_grp} in Appendix~\ref{app:spec1}).}
-The unit of observation is a group $g$ (year $\times$ stage). For each group we observe mean suspense under both rules, so the dependent variable is the within-group difference:
-\[
-\Delta\overline{\text{suspense}}_g
-  = \overline{\text{suspense}}^{\,\text{FIFA}}_g - \overline{\text{suspense}}^{\,\text{UEFA}}_g
-  = \alpha + \beta\,\textit{Elo\_std}_g + \varepsilon_g
-\]
-where \textit{Elo\_std} is the standard deviation of Elo ratings across the four teams in group $g$, proxying for competitive imbalance. Spec~1b adds year fixed effects. Standard errors are HC1 robust.\footnote{HC1 robust standard errors guard against heteroskedasticity arising from variation in competitive balance across groups, since groups with very different Elo dispersions may exhibit systematically different variances in the suspense gap.} Results are reported in Appendix~\ref{app:spec1}: the coefficient on \textit{Elo std} is negative but statistically insignificant in all four columns, implying that the FIFA advantage in suspense production is not driven by the degree of competitive balance within a group.
-
-\paragraph{Spec 2 — Minute-by-minute LPM (Table~\ref{tab:regression_mbm}).}
+\paragraph{Spec 1 — Minute-by-minute LPM (Table~\ref{tab:regression_mbm}).}
 The unit of observation is a match-minute $t$ in match $m$ of group $g$. FIFA and UEFA observations for the same group are stacked, so identification comes from within-group variation across rules:
 \[
 \textit{suspense}_{gmt}
@@ -186,7 +177,7 @@ The unit of observation is a match-minute $t$ in match $m$ of group $g$. FIFA an
 \]
 where \textit{FIFA\_rule} is a dummy equal to 1 for FIFA-rule observations, $t$ and $t^2$ capture the non-linear within-match time trend, \textit{Elo\_diff} controls for match-level quality imbalance, and $\mu_y$ are year fixed effects. Standard errors are clustered at the group (year~$\times$~stage) level.
 
-\paragraph{Spec 3 — Heterogeneous effects by competitive balance (Table~\ref{tab:regression_mbm}).}
+\paragraph{Spec 2 — Heterogeneous effects by competitive balance (Table~\ref{tab:regression_mbm}).}
 Spec~2 is extended with the group-level \textit{Elo\_std} and its interaction with the rule dummy, allowing the FIFA advantage to vary with how balanced the group is:
 \[
 \textit{suspense}_{gmt}
@@ -201,7 +192,7 @@ The coefficient $\phi$ tests whether the rule effect $\beta$ grows or shrinks in
 
 \input{tables/reg_mbm}
 
-Table~\ref{tab:regression_mbm} reports the Spec~2 and Spec~3 estimates. In the World Cup, \textit{FIFA\_rule} is positive and highly significant in Spec~2: a matchday-3 minute played under FIFA rules is associated with a 4.3 percentage point higher probability of being a suspenseful moment ($p<0.01$). When group-level competitive balance is added in Spec~3, the FIFA coefficient rises to 7.2 percentage points ($p<0.05$), while \textit{Elo std} itself enters negatively and significantly ($-0.003$, $p<0.05$), confirming that more unequal groups generate less suspense on average. Crucially, the interaction \textit{FIFA~$\times$~Elo std} is statistically insignificant, echoing the Spec~1 result: the FIFA advantage does not depend on how balanced the group is. In the European Championship, the coefficient on \textit{FIFA\_rule} is positive but statistically insignificant in both specifications (0.009 in Spec~2, 0.025 in Spec~3), consistent with the null result from the statistical tests.
+Table~\ref{tab:regression_mbm} reports the Spec~1 and Spec~2 estimates. In the World Cup, \textit{FIFA\_rule} is positive and highly significant in Spec~1: a matchday-3 minute played under FIFA rules is associated with a 4.3 percentage point higher probability of being a suspenseful moment ($p<0.01$). When group-level competitive balance is added in Spec~2, the FIFA coefficient rises to 7.2 percentage points ($p<0.05$), while \textit{Elo std} itself enters negatively and significantly ($-0.003$, $p<0.05$), confirming that more unequal groups generate less suspense on average. Crucially, the interaction \textit{FIFA~$\times$~Elo std} is statistically insignificant, indicating that the FIFA advantage does not depend on how balanced the group is. In the European Championship, the coefficient on \textit{FIFA\_rule} is positive but statistically insignificant in both specifications (0.009 in Spec~1, 0.025 in Spec~2), consistent with the null result from the statistical tests.
 
 Taken together, the regression evidence confirms the main finding: the FIFA goal-difference criterion generates more group-level suspense than the UEFA head-to-head criterion in the World Cup, and this effect is structural — uniform across the distribution of competitive balance.
 
@@ -211,11 +202,11 @@ Taken together, the regression evidence confirms the main finding: the FIFA goal
 
 This paper was motivated by the question of how alternative tie-breaking criteria shape the level of suspense in international football tournaments. Tie-breaking rules are not merely technical details: they influence the perceived attractiveness of games, with potential implications for revenues, stadium attendance, and viewership. By choosing one criterion over another, governing bodies implicitly decide how much uncertainty to preserve throughout the group stage.
 
-We compared the two main approaches in international football: the FIFA rule, which prioritises goal difference, and the UEFA rule, which prioritises head-to-head results. Our central finding is that the FIFA goal-difference criterion generates significantly more group-level suspense in the World Cup. A matchday-3 minute played under FIFA rules is associated with a 4.3 percentage point higher probability of being a suspenseful moment, and this advantage holds uniformly across groups of varying competitive balance. Moreover, suspense under FIFA rules is more stable over the course of a match: volatile groups maintain a substantial suspense advantage over stable ones throughout the full 90 minutes, while under UEFA rules this divergence sharpens only in the final stages.
+We compared the two main approaches in international football: the FIFA rule, which prioritises goal difference, and the UEFA rule, which prioritises head-to-head results. Our central finding is that the tie-breaking system significantly shapes group-level suspense in the World Cup — one of the largest and most-watched sporting events in the world. A matchday-3 minute played under FIFA rules is associated with a 4.3 percentage point higher probability of being a suspenseful moment, and this advantage holds uniformly across groups of varying competitive balance. Crucially, suspense under FIFA rules is not only higher on average but more evenly distributed across the full 90 minutes of play, meaning that the qualification race remains genuinely open for longer and keeps audiences engaged throughout the match rather than only in the closing stages.
 
-The European Championship serves as an informative contrast: applying the same analysis to Euro data produces no statistically significant difference between the two rules. This suggests that the FIFA advantage in suspense generation is not a universal property of the rule but is instead contingent on the structural features of the World Cup — most likely the larger number of groups, which reduces the role of any single head-to-head result and amplifies the collective impact of goal difference on qualification scenarios.
+The European Championship serves as an informative contrast: applying the same analysis to Euro data produces no statistically significant difference between the two rules. This null result underscores that the effect documented for the World Cup is not a mechanical consequence of how either rule operates in the abstract, but reflects the specific institutional context of the World Cup — a competition followed by billions of viewers worldwide, where the stakes of every group-stage goal are heightened by its global reach and the depth of fan engagement it generates.
 
-Overall, our results highlight that group-level suspense is a distinct and measurable dimension of tournament attractiveness that is shaped directly by institutional design choices. Since fans typically understand the tie-breaking rules of the tournaments they follow, governing bodies should consider how different criteria affect the perceived competitiveness and interest of group-stage matches. Our evidence suggests that FIFA's goal-difference criterion is the more suspense-generating rule, at least at the group level in the World Cup — a finding with practical relevance as both FIFA and UEFA continue to revise their tournament formats.
+Overall, our results establish that institutional design choices — specifically, the choice of tie-breaking criterion — have measurable consequences for the suspense experienced by the billions of fans who follow the World Cup. Since audiences are attentive to the qualification stakes, a rule that keeps more scenarios alive for longer directly raises the entertainment value of each match. Our evidence points to FIFA's goal-difference criterion as the more suspense-generating rule at the group level, a finding with direct relevance for governing bodies as they continue to revise tournament formats and seek to maximise the commercial and sporting value of their competitions.
 
 
 \bibliographystyle{apalike}
@@ -362,13 +353,6 @@ For the World Cup (Tables~\ref{tab:corr_wc} and~\ref{tab:corr_wc_mbm}), the numb
 \input{tables/corr_wc}
 \input{tables/corr_wc_mbm}
 
-
-\subsection{Group-Level Paired Regression (Spec 1)}
-\label{app:spec1}
-
-Table~\ref{tab:regression_grp} reports the Spec~1 estimates. The coefficient on \textit{Elo std} is negative in all four columns - for both the European Championship and the World Cup, with and without year fixed effects - and statistically insignificant. This implies that the advantage of the FIFA rule in generating suspense is not meaningfully shaped by competitive balance: groups with similar Elo ratings and groups with a dominant team show roughly the same FIFA-minus-UEFA suspense gap.
-
-\input{tables/reg_grp}
 
 
 \subsection{World Cup Suspense Trajectories by Group Type}

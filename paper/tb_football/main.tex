@@ -121,7 +121,7 @@ Table~\ref{tab:desc_stats_mbm} confirms the same trend for the minute-by-minute 
 \subsection{Suspense over Time}
 
 
-As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals. This more even spread suggests that goal-scoring events continue to arrive — and therefore to reshape the qualification picture — throughout the match, rather than clustering in short bursts. To examine whether this translates into a more sustained distribution of suspense, we classify World Cup groups as \textit{stable} or \textit{volatile} depending on whether their average number of \textit{qualification changed} lies below or above the median, and trace the minute-by-minute suspense trajectory separately for each type.
+As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals.
 
 \begin{figure}[H]
     \centering
@@ -130,23 +130,7 @@ As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comp
     \label{fig:gls_dist}
 \end{figure}
 
-Volatile groups exhibit higher levels of suspense than stable ones under both rules throughout the match. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses. 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/susp_traj_wc_fifa.png}
-    \caption{Suspense trajectories in World Cup groups (stable vs.\ volatile) under FIFA rules.}
-    \label{fig:susp_traj_wc_fifa}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/susp_traj_wc_uefa.png}
-    \caption{Suspense trajectories in World Cup groups (stable vs.\ volatile) under UEFA rules.}
-    \label{fig:susp_traj_wc_uefa}
-\end{figure}
-
-Figure~\ref{fig:susp_minute_wc} displays the average suspense per minute under each rule for the World Cup. FIFA rules generate systematically higher suspense across the full 90 minutes, with the largest gap in the final stage of the match.
+Figures~\ref{fig:susp_minute_wc} and~\ref{fig:susp_minute_eu} display the average suspense per minute under each rule for the World Cup and the European Championship respectively. In the World Cup, FIFA rules generate systematically higher suspense across the full 90 minutes, with the gap largest in the final stage of the match. In the European Championship, by contrast, the difference between the two rules is modest and — consistent with the statistical tests — not statistically significant. The contrast between the two panels makes the point directly: the effect of the tie-breaking rule on suspense is specific to the World Cup and does not arise mechanically from how the rules operate in any tournament context.
 
 \begin{figure}[H]
     \centering
@@ -155,9 +139,14 @@ Figure~\ref{fig:susp_minute_wc} displays the average suspense per minute under e
     \label{fig:susp_minute_wc}
 \end{figure}
 
-This pattern is consistent with \citet{csato2023avoid}, who, analysing the 2022/23 UEFA Nations League, argues from a theoretical perspective and through simulated outcomes that prioritising goal difference (FIFA) over head-to-head  (UEFA) criteria raises the stakes of matches toward the end of competition. The trajectories in Figure~\ref{fig:susp_minute_wc} provide direct empirical support for this mechanism in the World Cup context.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/susp_minute_eu.png}
+    \caption{Average suspense per minute under FIFA and UEFA rules — European Championship.}
+    \label{fig:susp_minute_eu}
+\end{figure}
 
-Corresponding figures for the European Championship — where the FIFA-UEFA difference in suspense trajectories is smaller and statistically insignificant — are reported in Appendix~\ref{app:euro_trajectories}.
+This pattern is consistent with \citet{csato2023avoid}, who, analysing the 2022/23 UEFA Nations League, argues from a theoretical perspective and through simulated outcomes that prioritising goal difference (FIFA) over head-to-head (UEFA) criteria raises the stakes of matches toward the end of competition. Figure~\ref{fig:susp_minute_wc} provides direct empirical support for this mechanism in the World Cup context. A breakdown of suspense trajectories by group type for both tournaments is reported in Appendix~\ref{app:wc_trajectories} and Appendix~\ref{app:euro_trajectories}.
 
 
 
@@ -380,6 +369,28 @@ Table~\ref{tab:regression_grp} reports the Spec~1 estimates. The coefficient on 
 \input{tables/reg_grp}
 
 
+\subsection{World Cup Suspense Trajectories by Group Type}
+\label{app:wc_trajectories}
+
+To examine whether the FIFA advantage translates into a more sustained distribution of suspense across the match, we classify World Cup groups as \textit{stable} or \textit{volatile} depending on whether their average number of qualification changes lies below or above the median, and trace the minute-by-minute suspense trajectory separately for each type.
+
+Volatile groups exhibit higher levels of suspense than stable ones under both rules. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the initial gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses: suspense in stable groups declines sharply toward the final minutes, while volatile groups retain relatively higher levels, producing a pronounced late-match divergence. The key distinction is therefore not only the level of suspense but its temporal stability: under FIFA rules the qualification race remains roughly equally open across the full 90 minutes, whereas under UEFA rules uncertainty tends to concentrate in the closing stages.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/susp_traj_wc_fifa.png}
+    \caption{Suspense trajectories in World Cup groups (stable vs.\ volatile) under FIFA rules.}
+    \label{fig:susp_traj_wc_fifa}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{images/susp_traj_wc_uefa.png}
+    \caption{Suspense trajectories in World Cup groups (stable vs.\ volatile) under UEFA rules.}
+    \label{fig:susp_traj_wc_uefa}
+\end{figure}
+
+
 \subsection{European Championship Suspense Trajectories}
 \label{app:euro_trajectories}
 
@@ -399,13 +410,5 @@ Figures~\ref{fig:susp_traj_eu_uefa} and~\ref{fig:susp_traj_eu_fifa} display the 
     \label{fig:susp_traj_eu_fifa}
 \end{figure}
 
-Figure~\ref{fig:susp_minute_eu} shows the average suspense per minute under each rule for the European Championship. FIFA rules generate somewhat higher suspense on average, but the gap is modest and not statistically significant.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{images/susp_minute_eu.png}
-    \caption{Average suspense per minute under FIFA and UEFA rules — European Championship.}
-    \label{fig:susp_minute_eu}
-\end{figure}
 
 \end{document}

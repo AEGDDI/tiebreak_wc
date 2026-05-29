@@ -80,13 +80,10 @@ For every match in both competitions, we collected the following information:
 
 \begin{itemize}
     \item \textbf{Goals scored}: including the scoring team, exact minute, and the evolving scoreline.
-    \item \textbf{Booking events}: yellow and red cards, including second yellow cards and straight red cards.
-    \item \textbf{Substitutions}: the timing of each substitution and the total number per team.
     \item \textbf{Team Elo ratings}: Elo ratings as of the day before each tournament began, retrieved from \url{https://www.international-football.net/}.
 \end{itemize}
 
-Goal data were used to reconstruct real-time group standings after each event, under both FIFA and UEFA tie-breaking criteria. In addition, Elo ratings, bookings, and substitutions were incorporated to estimate the probability of each team winning, drawing, or losing after each goal. These estimates account for the cumulative impact of disciplinary events and tactical changes, following the approach of \citet{titman2015joint}.
-\footnote{See Appendix~\ref{sec:bookings} for details on the rules applied to match dynamics and bookings.}
+Goal data were used to reconstruct real-time group standings after each event, under both FIFA and UEFA tie-breaking criteria. Elo ratings are used to measure competitive balance at both the group level (standard deviation of ratings across the four teams) and the match level (absolute difference between the two teams), as described in Section~\ref{sec:results}.
 
 
 \section{Methodological Framework}
@@ -123,8 +120,7 @@ Table~\ref{tab:desc_stats_mbm} confirms the same trend for the minute-by-minute 
 \subsection{Suspense over Time}
 
 
-As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals.
-
+As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals. This more even spread suggests that goal-scoring events continue to arrive — and therefore to reshape the qualification picture — throughout the match, rather than clustering in short bursts. To examine whether this translates into a more sustained distribution of suspense, we classify World Cup groups as \textit{stable} or \textit{volatile} depending on whether their average number of qualification changes lies below or above the median, and trace the minute-by-minute suspense trajectory separately for each type.
 
 \begin{figure}[H]
     \centering
@@ -133,10 +129,7 @@ As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comp
     \label{fig:gls_dist}
 \end{figure}
 
-
-To understand how the FIFA advantage manifests over the course of a match, we classify World Cup groups as \textit{stable} or \textit{volatile} depending on whether their average number of qualification changes lies below or above the median. This classification is merged into the minute-by-minute dataset, allowing us to trace the trajectory of suspense separately for stable and volatile groups.
-
-As shown in Figures~\ref{fig:susp_traj_wc_fifa} and~\ref{fig:susp_traj_wc_uefa}, volatile groups exhibit higher levels of suspense than stable ones under both rules throughout the match. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the initial gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses: suspense in stable groups declines sharply toward the final minutes, while volatile groups retain relatively higher levels, producing a pronounced late-match divergence. The key distinction is therefore not only the level of suspense but its stability: under FIFA rules, the qualification race remains open and roughly equally suspenseful throughout the 90 minutes.
+Volatile groups exhibit higher levels of suspense than stable ones under both rules throughout the match. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the initial gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses: suspense in stable groups declines sharply toward the final minutes, while volatile groups retain relatively higher levels, producing a pronounced late-match divergence. The key distinction is therefore not only the level of suspense but its temporal stability: under FIFA rules, the qualification race remains open and roughly equally suspenseful throughout the 90 minutes, whereas under UEFA rules uncertainty tends to concentrate in the closing stages.
 
 \begin{figure}[H]
     \centering

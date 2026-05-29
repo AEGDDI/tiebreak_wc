@@ -59,11 +59,8 @@ A related concern arises with the choice of tie-breaking rules, which directly s
 
 The consequences of these design flaws are not limited to sporting fairness but extend to the economics of sport consumption. Formats and rules that generate collusion opportunities or reduce competitiveness undermine fan interest, diminishing both the entertainment value and commercial revenues of tournaments. Understanding the drivers of demand for both live attendance and broadcast audiences is therefore essential. Several studies identify in-game dynamics as key factors: \citet{buraimo2020unscripted} show that suspense, surprise, and shock — capturing the tension and emotional intensity of matches — contribute to higher demand, particularly at specific moments of play. Likewise, \citet{alavy2010edge} argue that the progression of the game, rather than its final outcome alone, is crucial, with greater uncertainty about results increasing spectator engagement. Similarly, \citet{bizzozero2016importance} find a strong link between suspense and surprise on the one hand, and the demand for entertainment on the other. Finally, \citet{buraimo2022armchair} extend this perspective to television audiences, showing that demand cannot be explained solely by uncertainty of outcome but also depends on players' quality and the significance of the match.
 
-<<<<<<< HEAD
-Taken together, this domain of research shows that flawed formats and rules do not merely raise ethical and fairness concerns but also undermine the economic value of competitions by reducing engagement and the attractiveness of matches. Our contribution builds on this insight by examining how institutional features — in particular, tie-breaking rules — shape the stakes of a match and, ultimately, its perceived importance in the qualification race. In doing so, we introduce a group-level dimension of suspense that complements the match-level definitions of suspense, surprise, and shock established in the literature: while existing work captures how in-game events shift beliefs about a single match outcome, our measure captures how those same events reshape the broader qualification picture across the group, adding a layer of collective uncertainty that match-level metrics alone cannot recover.
-=======
-Taken together, this domain of research shows that flawed formats and rules do not merely raise ethical and fairness concerns but also undermine the economic value of competitions by reducing engagement and the attractiveness of matches. Our contribution builds on this insight by examining how institutional features — in particular, tie-breaking rules — shape the stakes of a match and, ultimately, its perceived importance in the qualification race. 
->>>>>>> 977c3399e9a192fd5f08ba711d6d8a01c0ae6658
+Taken together, this domain of research shows that flawed formats and rules do not merely raise ethical and fairness concerns but also undermine the economic value of competitions by reducing engagement and the attractiveness of matches. Our contribution builds on this insight by examining how institutional features — in particular, tie-breaking rules — shape the stakes of a match and, ultimately, its perceived importance in the qualification race. In doing so, we introduce a group-level dimension of suspense that complements the match-level definitions of suspense, surprise, and shock established in the literature: while existing work captures how in-game events shift beliefs about a single match outcome, our measure captures how those same events reshape the broader qualification picture across the group, adding a layer of uncertainty that match-level metrics alone cannot capture.
+
 
 
 \section{Data}
@@ -124,7 +121,7 @@ Table~\ref{tab:desc_stats_mbm} confirms the same trend for the minute-by-minute 
 \subsection{Suspense over Time}
 
 
-As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals. This more even spread suggests that goal-scoring events continue to arrive — and therefore to reshape the qualification picture — throughout the match, rather than clustering in short bursts. To examine whether this translates into a more sustained distribution of suspense, we classify World Cup groups as \textit{stable} or \textit{volatile} depending on whether their average number of qualification changes lies below or above the median, and trace the minute-by-minute suspense trajectory separately for each type.
+As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals. This more even spread suggests that goal-scoring events continue to arrive — and therefore to reshape the qualification picture — throughout the match, rather than clustering in short bursts. To examine whether this translates into a more sustained distribution of suspense, we classify World Cup groups as \textit{stable} or \textit{volatile} depending on whether their average number of \textit{qualification changed} lies below or above the median, and trace the minute-by-minute suspense trajectory separately for each type.
 
 \begin{figure}[H]
     \centering
@@ -133,7 +130,7 @@ As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comp
     \label{fig:gls_dist}
 \end{figure}
 
-Volatile groups exhibit higher levels of suspense than stable ones under both rules throughout the match. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the initial gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses: suspense in stable groups declines sharply toward the final minutes, while volatile groups retain relatively higher levels, producing a pronounced late-match divergence. The key distinction is therefore not only the level of suspense but its temporal stability: under FIFA rules, the qualification race remains open and roughly equally suspenseful throughout the 90 minutes, whereas under UEFA rules uncertainty tends to concentrate in the closing stages.
+Volatile groups exhibit higher levels of suspense than stable ones under both rules throughout the match. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses. 
 
 \begin{figure}[H]
     \centering
@@ -149,7 +146,7 @@ Volatile groups exhibit higher levels of suspense than stable ones under both ru
     \label{fig:susp_traj_wc_uefa}
 \end{figure}
 
-Figure~\ref{fig:susp_minute_wc} displays the average suspense per minute under each rule for the World Cup. FIFA rules generate systematically higher suspense across the full 90 minutes, with the gap largest in the early and middle stages of the match.
+Figure~\ref{fig:susp_minute_wc} displays the average suspense per minute under each rule for the World Cup. FIFA rules generate systematically higher suspense across the full 90 minutes, with the largest gap in the final stage of the match.
 
 \begin{figure}[H]
     \centering
@@ -158,9 +155,7 @@ Figure~\ref{fig:susp_minute_wc} displays the average suspense per minute under e
     \label{fig:susp_minute_wc}
 \end{figure}
 
-These patterns reinforce the econometric findings: the FIFA goal-difference rule not only produces more suspense on average, but distributes it more evenly over time. This has direct implications for audience engagement, since a competition that remains undecided for longer keeps viewers watching throughout rather than only in the final minutes.
-
-Our findings are consistent with \citet{csato2023avoid}, who, analysing the 2022/23 UEFA Nations League, argues from a theoretical perspective and through simulated outcomes that prioritising goal difference over head-to-head results raises the stakes of matches toward the end of competition. The trajectories in Figure~\ref{fig:susp_traj_wc_fifa} provide direct empirical support for this mechanism in the World Cup context.
+This pattern is consistent with \citet{csato2023avoid}, who, analysing the 2022/23 UEFA Nations League, argues from a theoretical perspective and through simulated outcomes that prioritising goal difference (FIFA) over head-to-head  (UEFA) criteria raises the stakes of matches toward the end of competition. The trajectories in Figure~\ref{fig:susp_minute_wc} provide direct empirical support for this mechanism in the World Cup context.
 
 Corresponding figures for the European Championship — where the FIFA-UEFA difference in suspense trajectories is smaller and statistically insignificant — are reported in Appendix~\ref{app:euro_trajectories}.
 
@@ -171,9 +166,9 @@ Corresponding figures for the European Championship — where the FIFA-UEFA diff
 
 \input{tables/tests_diff}
 
-Table~\ref{tab:tests_diff} formalises the descriptive patterns above. For the World Cup, the two tie-breaking rules produce markedly different levels of suspense: FIFA rules generate significantly higher group-level suspense than UEFA rules ($p < 0.05$), while the frequency of actual qualification turnover shows no statistically significant difference across systems. This separation is important: the FIFA rule increases the number of \textit{potential} qualification changes — and hence suspense — without necessarily increasing the number of \textit{actual} changes in the qualifying composition.
+Table~\ref{tab:tests_diff} formalises the descriptive patterns above. For the World Cup, the two tie-breaking rules produce markedly different levels of suspense: FIFA rules generate significantly higher group-level suspense than UEFA rules ($p < 0.05$), while the frequency of actual qualification turnover shows no statistically significant difference across systems. This distinction is important: the FIFA rule increases the number of \textit{potential} qualification changes — and hence suspense — without necessarily increasing the number of \textit{actual} changes in the qualifying composition.
 
-For the European Championship, by contrast, we do not detect statistically significant differences between FIFA and UEFA rules in any of the suspense or turnover measures. This null result is consistent with the hypothesis that group-level suspense in the European Championship is primarily driven by competitive balance rather than the specific tie-breaking rule applied. We therefore treat the European Championship as a natural placebo check: the same rule that matters in the World Cup does not generate a detectable effect in a tournament with different structural features.
+For the European Championship, by contrast, we do not detect statistically significant differences between FIFA and UEFA rules in any of the suspense or turnover measures. 
 
 
 \subsection{Regression Analysis}

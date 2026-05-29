@@ -118,10 +118,20 @@ Table~\ref{tab:desc_stats_goals}, Panel~A, shows that, from a purely descriptive
 
 Table~\ref{tab:desc_stats_mbm} confirms the same trend for the minute-by-minute analysis.
 
+\subsection{Statistical Tests}
+
+\input{tables/tests_diff}
+
+Table~\ref{tab:tests_diff} shows the statistical tests for the mean differences between UEFA and FIFA tiebreak rules. For the World Cup, the two tie-breaking rules produce markedly different levels of suspense: FIFA rules generate significantly higher group-level suspense than UEFA rules ($p < 0.05$), while the frequency of actual qualification turnover shows no statistically significant difference across systems. This distinction is important: the FIFA rule increases the number of \textit{potential} qualification changes — and hence suspense — without necessarily increasing the number of \textit{actual} changes in the qualifying composition.
+
+For the European Championship, by contrast, we do not detect statistically significant differences between FIFA and UEFA rules in any of the suspense or turnover measures. 
+
+
+
 \subsection{Suspense over Time}
 
 
-As shown in Figure~\ref{fig:gls_dist}, the two distributions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals.
+As shown in Figure~\ref{fig:gls_dist}, the goals distributions for the two competitions appear broadly comparable, with both tournaments showing peaks in goal frequency around the 20th–30th minute in the first half and between the 45th–55th minute spanning the two halves. Toward the end of matches, differences emerge: in the European Championship, there is a distinct peak between the 80th–85th minute, while in the World Cup goals are more evenly spread across the 80th–90th minute. Overall, World Cup goals appear more evenly distributed across the full 100 minutes of play, whereas the European Championship exhibits sharper jumps in specific intervals.
 
 \begin{figure}[H]
     \centering
@@ -150,14 +160,6 @@ This pattern is consistent with \citet{csato2023avoid}, who, analysing the 2022/
 
 
 
-
-\subsection{Statistical Tests}
-
-\input{tables/tests_diff}
-
-Table~\ref{tab:tests_diff} formalises the descriptive patterns above. For the World Cup, the two tie-breaking rules produce markedly different levels of suspense: FIFA rules generate significantly higher group-level suspense than UEFA rules ($p < 0.05$), while the frequency of actual qualification turnover shows no statistically significant difference across systems. This distinction is important: the FIFA rule increases the number of \textit{potential} qualification changes — and hence suspense — without necessarily increasing the number of \textit{actual} changes in the qualifying composition.
-
-For the European Championship, by contrast, we do not detect statistically significant differences between FIFA and UEFA rules in any of the suspense or turnover measures. 
 
 
 \subsection{Regression Analysis}
@@ -374,7 +376,7 @@ Table~\ref{tab:regression_grp} reports the Spec~1 estimates. The coefficient on 
 
 To examine whether the FIFA advantage translates into a more sustained distribution of suspense across the match, we classify World Cup groups as \textit{stable} or \textit{volatile} depending on whether their average number of qualification changes lies below or above the median, and trace the minute-by-minute suspense trajectory separately for each type.
 
-Volatile groups exhibit higher levels of suspense than stable ones under both rules. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the initial gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses: suspense in stable groups declines sharply toward the final minutes, while volatile groups retain relatively higher levels, producing a pronounced late-match divergence. The key distinction is therefore not only the level of suspense but its temporal stability: under FIFA rules the qualification race remains roughly equally open across the full 90 minutes, whereas under UEFA rules uncertainty tends to concentrate in the closing stages.
+Volatile groups exhibit higher levels of suspense than stable ones under both rules. Under FIFA's rules (Figure~\ref{fig:susp_traj_wc_fifa}), the gap between stable and volatile groups is already substantial at kick-off (around 0.4 points) and remains large throughout, as both trajectories gradually decline over time. Under UEFA's rules (Figure~\ref{fig:susp_traj_wc_uefa}), the initial gap is more moderate (approximately 0.2 points) but widens considerably as the match progresses.
 
 \begin{figure}[H]
     \centering
@@ -394,7 +396,7 @@ Volatile groups exhibit higher levels of suspense than stable ones under both ru
 \subsection{European Championship Suspense Trajectories}
 \label{app:euro_trajectories}
 
-Figures~\ref{fig:susp_traj_eu_uefa} and~\ref{fig:susp_traj_eu_fifa} display the suspense trajectories for stable and volatile groups in the European Championship under UEFA and FIFA rules respectively. Under UEFA's criteria (Figure~\ref{fig:susp_traj_eu_uefa}), the difference between the two trajectories is minimal at the start and end of matches, with the largest gap emerging between the 30th and 50th minutes. Under FIFA's criteria (Figure~\ref{fig:susp_traj_eu_fifa}), the gap starts at about 0.3 points and gradually narrows toward 0.2 points. In both cases, the differences are smaller in magnitude than those observed in the World Cup, consistent with the null result from the statistical tests.
+Figures~\ref{fig:susp_traj_eu_uefa} and~\ref{fig:susp_traj_eu_fifa} display the suspense trajectories for stable and volatile groups in the European Championship under UEFA and FIFA rules respectively. Under UEFA's criteria (Figure~\ref{fig:susp_traj_eu_uefa}), the difference between the two trajectories is minimal at the start and end of matches, with the largest gap emerging between the 30th and 50th minutes. Under FIFA's criteria (Figure~\ref{fig:susp_traj_eu_fifa}), the gap starts at about 0.3 points and gradually narrows toward 0.2 points. In both cases, the differences are smaller in magnitude than those observed in the World Cup, consistent with the null result from the statistical tests and the regression estimation.
 
 \begin{figure}[H]
     \centering

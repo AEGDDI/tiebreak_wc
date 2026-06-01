@@ -1,0 +1,7 @@
+pandoc "main.tex" -o "main.docx" --standalone --mathml --citeproc --bibliography="reference.bib" --csl="apa.csl" --resource-path=".;tables"
+
+
+#### ---- MAIN DIRECTORIES ---- #####
+
+cd /d "C:\Users\ALESSANDRO\Documents\GitHub\tb_football"
+cd /d "C:\Users\aldi\Documents\GitHub\tb_football"

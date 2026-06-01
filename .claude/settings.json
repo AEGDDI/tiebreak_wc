@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(pandoc \"main.tex\" -o \"main.docx\" --standalone --mathml --citeproc --bibliography=\"reference.bib\" --csl=\"apa.csl\" --resource-path=\".;tables\")"
     ]
   }
 }

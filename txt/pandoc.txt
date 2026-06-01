@@ -3,5 +3,31 @@ pandoc "main.tex" -o "main.docx" --standalone --mathml --citeproc --bibliography
 
 #### ---- MAIN DIRECTORIES ---- #####
 
-cd /d "C:\Users\ALESSANDRO\Documents\GitHub\tb_football"
-cd /d "C:\Users\aldi\Documents\GitHub\tb_football"
+cd /d "C:\Users\ALESSANDRO\Documents\GitHub\tb_football\paper\tb_football"
+
+cd /d "C:\Users\aldi\Documents\GitHub\tb_football\paper\tb_football"
+
+
+Decimals: 3 for non-integers number
+Right numbers in the tables
+Same format for all numbers in a table
+explicit and self-explaining names for files and variables
+
+	• Notes format size 10 times new roman
+	• Tables
+		○ Add number of the table (Table 1, Table 2, etc.)
+		○ Body font size 11
+		○ Title centered (ctrl +E)
+		○ Notes font size 9
+		○ Center column old and new format 
+		○ Center column number observations 
+		○ Autofit Window
+		○ Lines layout
+	• Figures 
+		○ Add title 
+	• Body format
+		○ 11 size, Times New Roman 
+		○  justified (ctrl +j)
+		○ line spacing 1.5
+	• Add References title 
+	• Add number to each section (introduction, literature review etc.)

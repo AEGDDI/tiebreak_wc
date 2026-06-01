@@ -17,15 +17,15 @@
 \maketitle
 
 
-\section*{mbm and goals datasets}
+\section*{Goal-level and minute-by-minute datasets}
 
-The first table describes the variables included in the goal-level datasets (mbm and goals).
+The table below describes all variables referenced in the paper (main text and appendix), drawn from the goal-level and minute-by-minute datasets.
 
 \bigskip
 
-\begin{longtable}{p{4cm} p{11cm}}
-\caption{Description of variables in the goal-level datasets}
-\label{tab:variables_description_goal} \\
+\begin{longtable}{p{4.5cm} p{10.5cm}}
+\caption{Description of variables used in the paper}
+\label{tab:variables_description} \\
 \toprule
 \textbf{Variable name} & \textbf{Description} \\
 \midrule
@@ -43,23 +43,12 @@ The first table describes the variables included in the goal-level datasets (mbm
 \bottomrule
 \endlastfoot
 
+%% ── Identifiers ──────────────────────────────────────────────────────────────
 year &
 Year in which the match took place. \\
 
 stage &
-Group stage from A to H. 8 Groups \\
-
-date &
-Calendar date on which the match was played. \\
-
-time &
-Kick-off time of the match. \\
-
-goal\_minute &
-Minute of the match in which the goal was scored. \\
-
-half\_time &
-Dummy variable equal to 0 if the match was not started yet, 1 if the goal was scored in the first half, and 2 if scored in the second half. \\
+Group identifier (A to H). \\
 
 home\_team &
 Name of the home team. \\
@@ -67,12 +56,23 @@ Name of the home team. \\
 away\_team &
 Name of the away team. \\
 
-scorer\_team &
-Team that scored the goal (home or away). \\
+goal\_minute &
+Minute of the match in which the goal was scored (denoted $t_k$ in the regression specifications). \\
 
-new\_top\_teams &
-list of teams who qualify to the knockout stage once the goal is scored\\
+%% ── Elo ratings ──────────────────────────────────────────────────────────────
+elo\_home &
+World Football Elo rating of the home team prior to the match, retrieved from \url{https://www.international-football.net/}. \\
 
+elo\_away &
+World Football Elo rating of the away team prior to the match. \\
+
+Elo\_diff &
+Absolute difference between the two teams' Elo ratings at goal $k$ (match-level competitive imbalance measure used in Spec~1 and Spec~2). \\
+
+Elo\_std &
+Standard deviation of Elo ratings across the four teams in the group (group-level competitive balance measure used in Spec~2). \\
+
+%% ── Group standings ──────────────────────────────────────────────────────────
 1st &
 Team ranked first in the group immediately after the goal. \\
 
@@ -80,16 +80,13 @@ Team ranked first in the group immediately after the goal. \\
 Number of points held by the first-ranked team after the goal. \\
 
 1st\_goals\_diff &
-Goal difference of the first-ranked team after the goal. \\
+Overall goal difference of the first-ranked team after the goal. \\
 
 1st\_goals\_scored &
 Total goals scored by the first-ranked team after the goal. \\
 
-1st\_last\_game\_points &
-Points obtained by the first-ranked team in its current match. \\
-
 1st\_last\_game\_goals\_diff &
-Goal difference recorded by the first-ranked team in its current match. \\
+Match-specific goal difference of the first-ranked team at the current minute. Used in the appendix to infer match points (\texttt{match\_pts}). \\
 
 2nd &
 Team ranked second in the group immediately after the goal. \\
@@ -98,16 +95,13 @@ Team ranked second in the group immediately after the goal. \\
 Number of points held by the second-ranked team after the goal. \\
 
 2nd\_goals\_diff &
-Goal difference of the second-ranked team after the goal. \\
+Overall goal difference of the second-ranked team after the goal. \\
 
 2nd\_goals\_scored &
 Total goals scored by the second-ranked team after the goal. \\
 
-2nd\_last\_game\_points &
-Points obtained by the second-ranked team in its current match. \\
-
 2nd\_last\_game\_goals\_diff &
-Goal difference recorded by the second-ranked team in its current match. \\
+Match-specific goal difference of the second-ranked team at the current minute. \\
 
 3rd &
 Team ranked third in the group immediately after the goal. \\
@@ -116,16 +110,13 @@ Team ranked third in the group immediately after the goal. \\
 Number of points held by the third-ranked team after the goal. \\
 
 3rd\_goals\_diff &
-Goal difference of the third-ranked team after the goal. \\
+Overall goal difference of the third-ranked team after the goal. \\
 
 3rd\_goals\_scored &
 Total goals scored by the third-ranked team after the goal. \\
 
-3rd\_last\_game\_points &
-Points obtained by the third-ranked team in its current match. \\
-
 3rd\_last\_game\_goals\_diff &
-Goal difference recorded by the third-ranked team in its current match. \\
+Match-specific goal difference of the third-ranked team at the current minute. \\
 
 4th &
 Team ranked fourth in the group immediately after the goal. \\
@@ -134,197 +125,51 @@ Team ranked fourth in the group immediately after the goal. \\
 Number of points held by the fourth-ranked team after the goal. \\
 
 4th\_goals\_diff &
-Goal difference of the fourth-ranked team after the goal. \\
+Overall goal difference of the fourth-ranked team after the goal. \\
 
 4th\_goals\_scored &
 Total goals scored by the fourth-ranked team after the goal. \\
 
-4th\_last\_game\_points &
-Points obtained by the fourth-ranked team in its current match. \\
-
 4th\_last\_game\_goals\_diff &
-Goal difference recorded by the fourth-ranked team in its current match. \\
+Match-specific goal difference of the fourth-ranked team at the current minute. \\
 
+%% ── Suspense logic variables ─────────────────────────────────────────────────
 third\_qualify &
-Dummy variable equal to 1 if the third-ranked team qualifies for the next stage, 0 otherwise. \\
-
-qualified\_teams &
-List of teams qualifying from the group to the next stage. \\
-
-qual\_changed &
-Dummy variable equal to 1 if the set of qualified teams changes as a consequence of the goal, 0 otherwise. \\
-
-qual\_count &
-Track of how many time the composition of qualified teams has changed in the group. \\
+Dummy equal to 1 if the third-ranked team qualifies for the next stage (e.g.\ best third-placed formats), 0 if only the top two qualify. Determines which cut-off pair (2nd vs 3rd, or 3rd vs 4th) is evaluated for suspense. \\
 
 pts\_diff &
-Points difference between the first non-qualified team  and the last qualified team after the goal. \\
+Points difference between the first non-qualified team (lagging) and the last qualified team (leading) after the goal, denoted $\texttt{pts\_diff}_0$ in the appendix. \\
 
 gls\_diff &
-Goals difference between the first non-qualified team  and the last qualified team after the goal. \\
+Overall goal difference between the lagging and leading teams after the goal, denoted $\texttt{gls\_diff}_0$ in the appendix. \\
 
-elo\_home &
-Elo rating of the home team prior to the match. \\
+gs\_diff &
+Goals scored by the lagging team minus goals scored by the leading team, denoted $\texttt{gs\_diff}_0$ in the appendix. Used as the third tier of the FIFA tie-breaking hierarchy after points and overall goal difference. \\
 
-elo\_away &
-Elo rating of the away team prior to the match. \\
+match\_pts &
+Match points inferred from the match goal difference at each minute: equal to \texttt{win\_pts} if match GD $> 0$, 1 if match GD $= 0$, and 0 if match GD $< 0$. \\
+
+win\_pts &
+Points awarded for a win: 2 if \texttt{year} $\leq$ 1992, 3 otherwise. \\
 
 h2h &
-It takes value 1 if the current match is exactly between teams whose direct confrontation is decisive for qualification at that moment, 0 otherwise. \\
+Dummy equal to 1 if the current match is played between the lagging and leading teams (i.e.\ their head-to-head fixture is ongoing), 0 if they are in separate matches. Affects how one-goal shocks propagate in the suspense calculation. \\
 
+h2h\_suspense &
+Dummy equal to 1 for observations where the qualification cut-off between the lagging and leading teams would be decided by the head-to-head tie-break under FIFA rules (i.e.\ both a +1 goal for the lagging team and a +1 concession by the leading team produce a full tie on points, overall goal difference, and overall goals scored). \\
+
+%% ── Outcome and treatment variables ─────────────────────────────────────────
 suspense &
-It takes value 1 if it is a moment of suspense as defined \href{https://github.com/AEGDDI/tb_football}{here} \\
+Binary indicator equal to 1 if a single goal in any ongoing group match would change the composition of teams qualifying for the knockout stage, 0 otherwise. The main outcome variable. \\
 
-\end{longtable}
+qual\_changed &
+Dummy equal to 1 if the set of qualified teams changes as a consequence of the goal, 0 otherwise. \\
 
-\section*{third teams}
+qual\_count &
+Cumulative count of how many times the composition of qualified teams has changed within the group (resets to 0 at the start of each group's last matchday). \\
 
-This table refers to all third\_teams datasets
-
-\bigskip
-
-
-\begin{longtable}{p{4cm} p{11cm}}
-\caption{Description of group-level qualification state variables}
-\label{tab:variables_group_state} \\
-\toprule
-\textbf{Variable name} & \textbf{Description} \\
-\midrule
-\endfirsthead
-
-\toprule
-\textbf{Variable name} & \textbf{Description} \\
-\midrule
-\endhead
-
-\midrule
-\multicolumn{2}{r}{\textit{Continued on next page}} \\
-\endfoot
-
-\bottomrule
-\endlastfoot
-
-year & Year in which the tournament took place. \\
-
-
-date & Calendar date of the match. \\
-
-
-time & Kick-off time of the match. \\
-
-
-goal\_minute & Minute at which the goal was scored. \\
-
-
-half\_time & Dummy equal to 1 if the observation refers to the first half, 2 to the second. \\
-
-
-stage & Group stage from A to H. 8 Groups  \\
-
-
-Group A & Ranking configuration of Group A at the time of the goal. In the list the first value is the team's name, followed by its total points, total goals difference, and total goals scored. The same stands for all other groups \\
-
-
-Group B & Ranking configuration of Group B at the time of the goal. \\
-
-
-Group C & Ranking configuration of Group C at the time of the goal. \\
-
-
-Group D & Ranking configuration of Group D at the time of the goal. \\
-
-
-Group E & Ranking configuration of Group E at the time of the goal. \\
-
-
-Group F & Ranking configuration of Group F at the time of the goal. \\
-
-
-top\_four & Set of teams currently ranked in the top four positions. \\
-
-
-last\_two & Set of teams currently ranked in the last two positions. \\
-
-
-tied\_teams & Set of teams tied at the qualification margin. \\
-
-
-change\_flag & Dummy equal to 1 if the composition of third teams changed, 0 otherwise. \\
-
-change\_count & It keeps track of the time the composition of third teams changed in the competition. \\
-\end{longtable}
-
-\section*{tables probabilities}
-
-This table refers to all tab\_prob
-\bigskip
-
-\begin{longtable}{p{4cm} p{11cm}}
-\caption{Description of probability-based surprise and suspense variables}
-\label{tab:variables_probabilities} \\
-\toprule
-\textbf{Variable name} & \textbf{Description} \\
-\midrule
-\endfirsthead
-
-\toprule
-\textbf{Variable name} & \textbf{Description} \\
-\midrule
-\endhead
-
-\midrule
-\multicolumn{2}{r}{\textit{Continued on next page}} \\
-\endfoot
-
-\bottomrule
-\endlastfoot
-
-year & Year in which the match took place. \\
-
-
-stage & Group stage from A to H. 8 Groups \\
-
-
-home\_team & Name of the home team. \\
-
-
-away\_team & Name of the away team. \\
-
-
-minute & Minute of the match at which the event occurs. \\
-
-
-score\_home & Number of goals scored by the home team at that minute. \\
-
-
-score\_away & Number of goals scored by the away team at that minute. \\
-
-
-P\_home & Model-implied probability of a home win after the event. \\
-
-P\_draw & Model-implied probability of a draw after the event. 
-
-
-P\_away & Model-implied probability of an away win after the event. \\
-
-
-dP\_home & Change in the probability of a home win relative to the previous minute. \\
-
-
-dP\_draw & Change in the probability of a draw relative to the previous minute. \\
-
-
-dP\_away & Change in the probability of an away win relative to the previous minute. \\
-
-
-shock & Maximum absolute change among $|dP_\text{home}|$, $|dP_\text{draw}|$, and $|dP_\text{away}|$. \\
-surprise & Sum of absolute probability changes: $|dP_\text{home}| + |dP_\text{draw}| + |dP_\text{away}|$. \\
-
-
-suspense & Weighted uncertainty measure computed as $\lambda \sum_j P_j(1-P_j)$, where $j \in \{\text{home}, \text{draw}, \text{away}\}$. \\
-
-
-event & Text description of the match event (e.g., start of the match, goal by home or away team). \\
+FIFA\_rule &
+Dummy equal to 1 for observations evaluated under FIFA's goal-difference tie-breaking rule, 0 for observations evaluated under UEFA's head-to-head rule. The main treatment variable in Spec~1 and Spec~2. \\
 
 \end{longtable}
 

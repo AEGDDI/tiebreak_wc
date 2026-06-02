@@ -25,7 +25,7 @@
 \maketitle
 
 \begin{abstract}
-This study provides empirical evidence on how tie-breaking rules shape group-level suspense in international football tournaments. By comparing the goal-difference criterion used by FIFA in the World Cup with the head-to-head criterion used by UEFA in the European Championship, we construct a binary suspense indicator that captures whether a single goal could alter the composition of teams qualifying for the knockout stage. Our main finding is that FIFA's goal-difference rule generates significantly higher group-level suspense in the World Cup: a goal scored under FIFA rules on the last matchday of the group stage is associated with a 4.2 percentage point higher probability of occurring in a suspenseful state, and this advantage is robust to controlling for competitive balance. We further show that suspense under FIFA rules is more stable and persistent over the 90 minutes of play, with volatile groups exhibiting consistently higher suspense throughout. The same pattern does not emerge in the European Championship, where the choice of tie-breaking rule does not significantly affect group-level suspense.
+This study provides empirical evidence on how tie-breaking rules shape group-level suspense in international football tournaments. By comparing the goal-difference criterion used by FIFA in the World Cup with the head-to-head criterion used by UEFA in the European Championship, we construct a binary suspense indicator that captures whether a single goal could alter the composition of teams qualifying for the knockout stage. Our main finding is that FIFA's goal-difference rule generates significantly higher group-level suspense in the World Cup: a goal scored under FIFA rules on the last matchday of the group stage is associated with a 4.2 percentage point higher probability of occurring in a suspenseful state, and this advantage is robust after controlling for competitive balance. We further show that suspense under FIFA rules is more stable and persistent over the 90 minutes of play. The same pattern does not emerge in the European Championship, where the choice of tie-breaking rule does not significantly affect group-level suspense.
 \end{abstract}
 
 \newpage
@@ -124,7 +124,7 @@ Table~\ref{tab:desc_stats_mbm} confirms the same trend for the minute-by-minute 
 
 Table~\ref{tab:tests_diff} reports paired t-tests and Wilcoxon signed-rank tests comparing group-level mean suspense and mean qualification count across all 74 World Cup groups and all 44 European Championship groups. For the World Cup, the two tie-breaking rules produce markedly different levels of suspense: FIFA rules generate significantly higher group-level suspense than UEFA rules ($p<0.01$, both tests), while the frequency of actual qualification turnover shows no statistically significant difference across systems ($p=0.535$). This separation is important: the FIFA rule increases the number of \textit{potential} qualification changes — and hence suspense — without necessarily changing the frequency of \textit{actual} changes in the qualifying composition.
 
-For the European Championship, by contrast, neither suspense nor qualification turnover differs significantly between the two rules ($p=0.389$ and $p=0.182$ respectively). This null result is consistent with the hypothesis that group-level suspense in the European Championship is primarily driven by competitive balance rather than the specific tie-breaking rule, and we treat it as a placebo check throughout the analysis.
+For the European Championship, by contrast, neither suspense nor qualification turnover differs significantly between the two rules ($p=0.389$ and $p=0.182$ respectively). 
 
 
 
@@ -188,7 +188,7 @@ Spec~1 is extended with the group-level \textit{Elo\_std} and its interaction wi
   + \phi\,(\textit{FIFA\_rule}_{gm} \times \textit{Elo\_std}_g)
   + \mu_y + \varepsilon_{gmk}
 \]
-The coefficient $\phi$ tests whether the rule effect $\beta$ grows or shrinks in more unequal groups. The main effect $\theta$ must be included whenever the interaction is present to avoid misspecification.
+The coefficient $\phi$ tests whether the rule effect $\beta$ grows or shrinks in more unequal groups.
 
 \input{tables/reg_mbm}
 

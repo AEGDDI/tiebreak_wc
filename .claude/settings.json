@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(python -c ' *)",
-      "Bash(pandoc \"main.tex\" -o \"main.docx\" --standalone --mathml --citeproc --bibliography=\"reference.bib\" --csl=\"apa.csl\" --resource-path=\".;tables\")"
+      "Bash(pandoc \"main.tex\" -o \"main.docx\" --standalone --mathml --citeproc --bibliography=\"reference.bib\" --csl=\"apa.csl\" --resource-path=\".;tables\")",
+      "Bash(python -m jupyter nbconvert --version)",
+      "Bash(jupyter nbconvert *)",
+      "PowerShell(jupyter nbconvert --version)",
+      "PowerShell(python -m jupyter nbconvert --version)",
+      "PowerShell(python -m nbconvert --version 2>&1)",
+      "PowerShell(python -m nbconvert --to html \"C:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tennis-homophily\\\\code\\\\analysis\\\\homophily_analysis.ipynb\" --execute --output \"C:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tennis-homophily\\\\report.html\" 2>&1)",
+      "Bash(python)",
+      "PowerShell(python -c \"import subprocess; r = subprocess.run\\(['pdflatex', '--version'], capture_output=True, text=True\\); print\\(r.stdout[:100] if r.returncode==0 else 'not found'\\)\" 2>&1)",
+      "Bash(python -c \"import weasyprint; print\\('weasyprint ok'\\)\")",
+      "PowerShell(\\(Get-Item \"C:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tennis-homophily\\\\report.pdf\"\\).Length)",
+      "PowerShell(\\(Get-Item \"C:\\\\Users\\\\aldi\\\\Documents\\\\GitHub\\\\tennis-homophily\\\\report.pdf\"\\).LastWriteTime)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\aldi\\Documents\\GitHub\\tennis-homophily\\code\\analysis"
     ]
   }
 }

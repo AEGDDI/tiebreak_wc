@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(python -c ' *)",
-      "Bash(python code/estimation/regression.py)"
+      "Bash(python code/estimation/regression.py)",
+      "Bash(python -c \"import pptx; print\\(pptx.__version__\\)\")",
+      "Bash(pip install *)",
+      "Bash(python make_presentation.py)"
     ]
   }
 }

@@ -7,7 +7,13 @@
       "Bash(pip install *)",
       "Bash(python make_presentation.py)",
       "Bash(python code/merge/add_summary_cells.py)",
-      "Bash(del code\\\\merge\\\\add_summary_cells.py)"
+      "Bash(del code\\\\merge\\\\add_summary_cells.py)",
+      "Bash(where stata *)",
+      "Bash(where StataMP)",
+      "Bash(where StataSE)",
+      "Read(//c/Program Files/**)",
+      "Bash(\"/c/Program Files/Stata16/StataSE-64.exe\" /e do \"C:/Users/aldi/Documents/GitHub/tb_football/code/estimation/regression_check.do\")",
+      "Bash(python -)"
     ]
   }
 }

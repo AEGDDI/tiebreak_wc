@@ -16,7 +16,7 @@ import excel using "`base'/data/out/goals_merged.xlsx", firstrow clear
 
 gen group_id = string(year) + "_" + stage + "_" + string(fifa_rule)
 encode group_id, gen(group_num)
-gen year_x_fifa = year * fifa_rule
+gen year_c = year - 2000
 
 * Group-level elo min and max (weakest and strongest team in each group)
 bysort year stage fifa_rule: gen g_elo_min = elo4th[1]
@@ -50,27 +50,27 @@ margins, dydx(*)
 * With year trend and year x fifa_rule interaction
 * (Year fixed effects omitted: WC and EU alternate years, so year dummies
 *  would be collinear with fifa_rule and the treatment would be unidentified)
-logit qual_changed fifa_rule elo_favorite elo_underdog year year_x_fifa, vce(cluster group_num)
+logit qual_changed fifa_rule elo_favorite elo_underdog year_c, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: two qualifying teams per group
-logit qual_changed fifa_rule elo_favorite elo_underdog year year_x_fifa if third_qualify == 0, vce(cluster group_num)
+logit qual_changed fifa_rule elo_favorite elo_underdog year_c if third_qualify == 0, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: three qualifying teams per group
-logit qual_changed fifa_rule elo_favorite elo_underdog year year_x_fifa if third_qualify == 1, vce(cluster group_num)
+logit qual_changed fifa_rule elo_favorite elo_underdog year_c if third_qualify == 1, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: 2-points rule (year <= 1992)
-logit qual_changed fifa_rule elo_favorite elo_underdog year year_x_fifa if year <= 1992, vce(cluster group_num)
+logit qual_changed fifa_rule elo_favorite elo_underdog year_c if year <= 1992, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: 3-points rule (year > 1992)
-logit qual_changed fifa_rule elo_favorite elo_underdog year year_x_fifa if year > 1992, vce(cluster group_num)
+logit qual_changed fifa_rule elo_favorite elo_underdog year_c if year > 1992, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: elo common support
-logit qual_changed fifa_rule elo_favorite elo_underdog year year_x_fifa if elo_overlap == 1, vce(cluster group_num)
+logit qual_changed fifa_rule elo_favorite elo_underdog year_c if elo_overlap == 1, vce(cluster group_num)
 margins, dydx(*)
 
 
@@ -84,27 +84,27 @@ logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th, vce(cluster group_num)
 margins, dydx(*)
 
 * With year trend
-logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa, vce(cluster group_num)
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: two qualifying teams
-logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if third_qualify == 0, vce(cluster group_num)
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 0, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: three qualifying teams
-logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if third_qualify == 1, vce(cluster group_num)
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 1, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: 2-points rule
-logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if year <= 1992, vce(cluster group_num)
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if year <= 1992, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: 3-points rule
-logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if year > 1992, vce(cluster group_num)
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if year > 1992, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: elo common support
-logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if elo_overlap == 1, vce(cluster group_num)
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if elo_overlap == 1, vce(cluster group_num)
 margins, dydx(*)
 
 
@@ -116,29 +116,29 @@ margins, dydx(*)
 preserve
 
 collapse (max) qual_count third_qualify elo_overlap ///
-         (first) elo1st elo2nd elo3rd elo4th year_x_fifa g_elo_min g_elo_max, ///
+         (first) elo1st elo2nd elo3rd elo4th year_c g_elo_min g_elo_max, ///
          by(year stage fifa_rule)
 
 * Main
 poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th, vce(robust)
 
 * With year trend
-poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa, vce(robust)
+poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year_c, vce(robust)
 
 * Robustness: two qualifying teams
-poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if third_qualify == 0, vce(robust)
+poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 0, vce(robust)
 
 * Robustness: three qualifying teams
-poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if third_qualify == 1, vce(robust)
+poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 1, vce(robust)
 
 * Robustness: 2-points rule
-poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if year <= 1992, vce(robust)
+poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year_c if year <= 1992, vce(robust)
 
 * Robustness: 3-points rule
-poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if year > 1992, vce(robust)
+poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year_c if year > 1992, vce(robust)
 
 * Robustness: elo common support
-poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if elo_overlap == 1, vce(robust)
+poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year_c if elo_overlap == 1, vce(robust)
 
 restore
 
@@ -153,7 +153,7 @@ import excel using "`base'/data/out/mbm_merged.xlsx", firstrow clear
 
 gen group_id = string(year) + "_" + stage + "_" + string(fifa_rule)
 encode group_id, gen(group_num)
-gen year_x_fifa = year * fifa_rule
+gen year_c = year - 2000
 
 bysort year stage fifa_rule: gen g_elo_min = elo4th[1]
 bysort year stage fifa_rule: gen g_elo_max = elo1st[1]
@@ -176,25 +176,25 @@ logit suspense fifa_rule elo1st elo2nd elo3rd elo4th, vce(cluster group_num)
 margins, dydx(*)
 
 * With year trend
-logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa, vce(cluster group_num)
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: two qualifying teams
-logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if third_qualify == 0, vce(cluster group_num)
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 0, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: three qualifying teams
-logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if third_qualify == 1, vce(cluster group_num)
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 1, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: 2-points rule
-logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if year <= 1992, vce(cluster group_num)
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if year <= 1992, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: 3-points rule
-logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if year > 1992, vce(cluster group_num)
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if year > 1992, vce(cluster group_num)
 margins, dydx(*)
 
 * Robustness: elo common support
-logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year year_x_fifa if elo_overlap == 1, vce(cluster group_num)
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if elo_overlap == 1, vce(cluster group_num)
 margins, dydx(*)

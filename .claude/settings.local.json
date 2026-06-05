@@ -5,7 +5,9 @@
       "Bash(python code/estimation/regression.py)",
       "Bash(python -c \"import pptx; print\\(pptx.__version__\\)\")",
       "Bash(pip install *)",
-      "Bash(python make_presentation.py)"
+      "Bash(python make_presentation.py)",
+      "Bash(python code/merge/add_summary_cells.py)",
+      "Bash(del code\\\\merge\\\\add_summary_cells.py)"
     ]
   }
 }

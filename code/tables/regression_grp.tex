@@ -1,27 +1,44 @@
 
 \begin{table}[H]
 \centering
-\caption{Group-level paired regression: $\Delta\,\overline{\text{suspense}}_g = \overline{\text{suspense}}^{\text{FIFA}}_g - \overline{\text{suspense}}^{\text{UEFA}}_g$}
-\label{tab:regression_grp}
+\caption{Effect of FIFA tie-breaking rule on qualification change and count}
+\label{tab:reg_grp}
 \begin{threeparttable}
-\begin{tabular}{lcccc}
+\small
+\begin{tabular}{l cc cc cc}
 \toprule
- & \multicolumn{2}{c}{European Championship} & \multicolumn{2}{c}{World Cup} \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}
- & (1a) & (1b) & (2a) & (2b) \\
+ & \multicolumn{2}{c}{M1: Logit (AME)} & \multicolumn{2}{c}{M2: Logit (AME)} & \multicolumn{2}{c}{M3: Poisson (coef)} \\
+ & \multicolumn{2}{c}{\textit{qual\_changed}} & \multicolumn{2}{c}{\textit{qual\_changed}} & \multicolumn{2}{c}{\textit{qual\_count}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
 \midrule
-Elo std & -0.0003 & -0.0001 & -0.0005 & -0.0004 \\
-        & (0.0005) & (0.0006) & (0.0003) & (0.0003) \\
+\multicolumn{7}{l}{\textit{Panel A: Main specifications}} \\[2pt]
+FIFA\_rule & $-0.097^{**}$ & $-0.083^{*}$ & $-0.065$ & $-0.043$ & $-0.331$ & $-0.271$ \\
+          & $(0.048)$ & $(0.046)$ & $(0.045)$ & $(0.042)$ & $(0.243)$ & $(0.237)$ \\[3pt]
+Match-level Elo & \checkmark & \checkmark & -- & -- & -- & -- \\
+Group-level Elo & -- & -- & \checkmark & \checkmark & \checkmark & \checkmark \\
+Year trend (\textit{year\_c}) & -- & \checkmark & -- & \checkmark & -- & \checkmark \\[3pt]
+Observations    & 607 & 607 & 725 & 725 & 118 & 118 \\
+Pseudo-$R^2$ / Log-$L$ & 0.016 & 0.023 & 0.023 & 0.032 & $-$174.6 & $-$173.9 \\
 \midrule
-Year FE & No & Yes & No & Yes \\
-N groups & 42 & 42 & 73 & 73 \\
+\multicolumn{7}{l}{\textit{Panel B: Robustness — FIFA\_rule only (all specifications include year\_c)}} \\[2pt]
+ & \multicolumn{2}{c}{M1} & \multicolumn{2}{c}{M2} & \multicolumn{2}{c}{M3} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Two qualifying teams    & \multicolumn{2}{c}{$-0.074$} & \multicolumn{2}{c}{$-0.031$} & \multicolumn{2}{c}{$-0.118$} \\
+                        & \multicolumn{2}{c}{$(0.046)$} & \multicolumn{2}{c}{$(0.044)$} & \multicolumn{2}{c}{$(0.304)$} \\
+Three qualifying teams  & \multicolumn{2}{c}{$-0.414$} & \multicolumn{2}{c}{$-0.539$} & \multicolumn{2}{c}{$-2.597$} \\
+                        & \multicolumn{2}{c}{$(0.629)$} & \multicolumn{2}{c}{$(0.499)$} & \multicolumn{2}{c}{$(1.892)$} \\
+2-points rule ($\le 1992$) & \multicolumn{2}{c}{$0.044$} & \multicolumn{2}{c}{$0.242$} & \multicolumn{2}{c}{$0.599$} \\
+                        & \multicolumn{2}{c}{$(0.125)$} & \multicolumn{2}{c}{$(0.170)$} & \multicolumn{2}{c}{$(0.829)$} \\
+3-points rule ($> 1992$) & \multicolumn{2}{c}{$-0.092^{*}$} & \multicolumn{2}{c}{$-0.047$} & \multicolumn{2}{c}{$-0.284$} \\
+                        & \multicolumn{2}{c}{$(0.048)$} & \multicolumn{2}{c}{$(0.041)$} & \multicolumn{2}{c}{$(0.252)$} \\
+Elo common support      & \multicolumn{2}{c}{$-0.071$} & \multicolumn{2}{c}{$-0.043$} & \multicolumn{2}{c}{$-0.263$} \\
+                        & \multicolumn{2}{c}{$(0.048)$} & \multicolumn{2}{c}{$(0.044)$} & \multicolumn{2}{c}{$(0.240)$} \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \small
-\item OLS with HC1 robust standard errors. All observations are from matchday 3.
-Dependent variable is the within-group difference in mean suspense (FIFA minus UEFA).
-$^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\item \textit{Notes:} M1 and M2 are logit models; coefficients are average marginal effects (AME). M3 is a Poisson model reporting log-rate coefficients. M1 controls for the Elo ratings of the stronger (\textit{elo\_fav}) and weaker (\textit{elo\_und}) team in each match. M2 and M3 include the four group-level Elo ranks (\textit{elo1st}--\textit{elo4th}). Standard errors are clustered at the group (year~$\times$~stage) level for M1--M2; HC0 robust standard errors for M3. The outcome variable is \textit{qual\_changed} (binary) in M1--M2 and the group-level maximum of \textit{qual\_count} in M3. Panel~B reports only the FIFA\_rule estimate; all Panel~B specifications include \textit{year\_c}. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}

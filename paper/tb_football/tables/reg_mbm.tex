@@ -1,39 +1,38 @@
 
 \begin{table}[H]
 \centering
-\caption{Goal-level LPM: effect of FIFA tie-breaking rule on suspense}
-\label{tab:regression_mbm}
+\caption{Effect of FIFA tie-breaking rule on suspense (minute-by-minute logit, AME)}
+\label{tab:reg_mbm}
 \begin{threeparttable}
-\begin{tabular}{lcccc}
+\begin{tabular}{l cc}
 \toprule
- & \multicolumn{2}{c}{European Championship} & \multicolumn{2}{c}{World Cup} \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-5}
- & Spec 1 & Spec 2 & Spec 1 & Spec 2 \\
+ & (1) Main & (2) $+$Year trend \\
 \midrule
-FIFA\_rule & 0.0088 & 0.0307 & 0.0420*** & 0.0745** \\
-       & (0.0212) & (0.0393) & (0.0154) & (0.0344) \\
-Minute & -0.0067 & -0.0071 & -0.0069* & -0.0069** \\
-       & (0.0046) & (0.0045) & (0.0036) & (0.0035) \\
-Minute$^2$ & 0.0000 & 0.0001 & 0.0001 & 0.0001 \\
-       & (0.0000) & (0.0000) & (0.0000) & (0.0000) \\
-Elo diff & 0.0000 & 0.0001 & 0.0002 & 0.0002 \\
-       & (0.0004) & (0.0003) & (0.0003) & (0.0003) \\
-Elo std & --- & 0.0012 & --- & -0.0022** \\
-       & --- & (0.0019) & --- & (0.0010) \\
-FIFA $\times$ Elo std & --- & -0.0006 & --- & -0.0006 \\
-       & --- & (0.0006) & --- & (0.0004) \\
+\multicolumn{3}{l}{\textit{Panel A: Main specifications}} \\[2pt]
+FIFA\_rule & $-0.031$ & $0.001$ \\
+          & $(0.081)$ & $(0.083)$ \\[3pt]
+Group-level Elo controls & \checkmark & \checkmark \\
+Year trend (\textit{year\_c}) & -- & \checkmark \\[3pt]
+Observations & 10{,}833 & 10{,}833 \\
+Pseudo-$R^2$ & 0.029 & 0.037 \\
 \midrule
-Year FE        & Yes & Yes & Yes & Yes \\
-N (obs)        & 452 & 450 & 762 & 760 \\
+\multicolumn{3}{l}{\textit{Panel B: Robustness — FIFA\_rule only (all specifications include year\_c)}} \\[2pt]
+\midrule
+Two qualifying teams   & \multicolumn{2}{c}{$-0.084$\phantom{$^{**}$}} \\
+                       & \multicolumn{2}{c}{$(0.095)$} \\
+Three qualifying teams & \multicolumn{2}{c}{$-0.219$\phantom{$^{**}$}} \\
+                       & \multicolumn{2}{c}{$(0.753)$} \\
+2-points rule ($\le 1992$) & \multicolumn{2}{c}{$\phantom{-}0.265$\phantom{$^{**}$}} \\
+                       & \multicolumn{2}{c}{$(0.278)$} \\
+3-points rule ($> 1992$) & \multicolumn{2}{c}{$\phantom{-}0.014$\phantom{$^{**}$}} \\
+                       & \multicolumn{2}{c}{$(0.086)$} \\
+Elo common support     & \multicolumn{2}{c}{$-0.012$\phantom{$^{**}$}} \\
+                       & \multicolumn{2}{c}{$(0.084)$} \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \small
-\item Linear probability model. Unit of observation is a goal scored on matchday~3.
-Standard errors clustered at the group (year $\times$ stage) level.
-Outcome is the binary suspense indicator. Initial-state rows (minute~0, no Elo)
-are excluded. Spec~2 adds Elo std and its interaction with FIFA\_rule.
-$^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\item \textit{Notes:} Logit model for the binary \textit{suspense} indicator. Coefficients are average marginal effects (AME). Group-level Elo ranks (\textit{elo1st}--\textit{elo4th}) are included as controls in all specifications. Standard errors are clustered at the group (year~$\times$~stage) level. Panel~B robustness samples: ``Two qual.'' restricts to groups where exactly two teams qualify (\textit{third\_qualify}=0); ``Three qual.'' to groups where three teams qualify; ``2-pts rule'' to years $\le 1992$; ``3-pts rule'' to years $>1992$; ``Elo CS'' to groups within the Elo common support [$1523,\,2127$]. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}

@@ -5,7 +5,7 @@
     * Also here we create elo1st, elo2nd, elo3rd, elo4th following the same logic
 * In both datasets, create the variable fifa_rule thaking value 1 for World Cup (wc) observations and 0 for European Championship (eu).
 * Keep track of the merging and variables creation process in a separate file in the folder code/merge and save the final datasets in the folder data/out
-* Update the summary_stats.ipynb and  create the corresponding do file 
+* Update the summary_stats.ipynb and create the corresponding do file 
 * Models for goals dataset:
     * First:
 

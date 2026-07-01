@@ -52,4 +52,6 @@ try to keep the merging and model simple and accessible. just do what I have ask
 
 
 
-
+------------------------------
+Add as control elo 1,2,3,4
+------------------------------

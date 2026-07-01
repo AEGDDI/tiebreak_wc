@@ -1,0 +1,43 @@
+
+\begin{table}[H]
+\centering
+\caption{Effect of FIFA tie-breaking rule on suspense — goal-level logit (AME)}
+\label{tab:reg_susp}
+\begin{threeparttable}
+\small
+\begin{tabular}{l cc cc}
+\toprule
+ & \multicolumn{2}{c}{M4: Match-level Elo} & \multicolumn{2}{c}{M5: Group-level Elo} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & (1) Main & (2) $+$Year & (3) Main & (4) $+$Year \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A: Main specifications}} \\[2pt]
+FIFA\_rule & $-0.015$ & $-0.001$ & $\phantom{-}0.019$ & $\phantom{-}0.044$ \\
+          & $(0.075)$ & $(0.077)$ & $(0.075)$ & $(0.076)$ \\[3pt]
+Match-level Elo (\textit{elo\_fav}, \textit{elo\_und}) & \checkmark & \checkmark & -- & -- \\
+Group-level Elo (\textit{elo1st}--\textit{elo4th})    & -- & -- & \checkmark & \checkmark \\
+Year trend (\textit{year\_c}) & -- & \checkmark & -- & \checkmark \\[3pt]
+Observations & 607 & 607 & 725 & 725 \\
+Pseudo-$R^2$ & 0.012 & 0.018 & 0.024 & 0.029 \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel B: Robustness — FIFA\_rule only (all specifications include year\_c)}} \\[2pt]
+ & \multicolumn{2}{c}{M4} & \multicolumn{2}{c}{M5} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Two qualifying teams    & \multicolumn{2}{c}{$-0.080$} & \multicolumn{2}{c}{$-0.036$} \\
+                        & \multicolumn{2}{c}{$(0.084)$} & \multicolumn{2}{c}{$(0.090)$} \\
+Three qualifying teams  & \multicolumn{2}{c}{$-0.006$} & \multicolumn{2}{c}{$-0.734$} \\
+                        & \multicolumn{2}{c}{$(0.642)$} & \multicolumn{2}{c}{$(0.630)$} \\
+2-points rule ($\le 1992$) & \multicolumn{2}{c}{$-0.151$} & \multicolumn{2}{c}{$\phantom{-}0.079$} \\
+                        & \multicolumn{2}{c}{$(0.160)$} & \multicolumn{2}{c}{$(0.314)$} \\
+3-points rule ($> 1992$) & \multicolumn{2}{c}{$\phantom{-}0.031$} & \multicolumn{2}{c}{$\phantom{-}0.068$} \\
+                        & \multicolumn{2}{c}{$(0.082)$} & \multicolumn{2}{c}{$(0.080)$} \\
+Elo common support      & \multicolumn{2}{c}{$\phantom{-}0.006$} & \multicolumn{2}{c}{$\phantom{-}0.029$} \\
+                        & \multicolumn{2}{c}{$(0.080)$} & \multicolumn{2}{c}{$(0.077)$} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Logit model for the binary \textit{suspense} indicator estimated on the goal-level dataset. Coefficients are average marginal effects (AME). M4 controls for match-level Elo ratings (\textit{elo\_fav}, \textit{elo\_und}); M5 uses group-level Elo ranks (\textit{elo1st}--\textit{elo4th}). Standard errors are clustered at the group (year~$\times$~stage) level. Panel~B robustness samples follow the same definitions as in Table~\ref{tab:reg_grp}; all Panel~B specifications include \textit{year\_c}. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

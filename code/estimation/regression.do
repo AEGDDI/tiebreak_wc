@@ -143,6 +143,74 @@ poisson qual_count fifa_rule elo1st elo2nd elo3rd elo4th year_c if elo_overlap =
 restore
 
 
+* -------------------------------------------------------
+* Model 4 — Logit for suspense, match-level Elo (goals dataset)
+* suspense = f(fifa_rule, elo_favorite, elo_underdog)
+* -------------------------------------------------------
+
+* Main
+logit suspense fifa_rule elo_favorite elo_underdog, vce(cluster group_num)
+margins, dydx(*)
+
+* With year trend
+logit suspense fifa_rule elo_favorite elo_underdog year_c, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: two qualifying teams
+logit suspense fifa_rule elo_favorite elo_underdog year_c if third_qualify == 0, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: three qualifying teams
+logit suspense fifa_rule elo_favorite elo_underdog year_c if third_qualify == 1, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: 2-points rule
+logit suspense fifa_rule elo_favorite elo_underdog year_c if year <= 1992, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: 3-points rule
+logit suspense fifa_rule elo_favorite elo_underdog year_c if year > 1992, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: elo common support
+logit suspense fifa_rule elo_favorite elo_underdog year_c if elo_overlap == 1, vce(cluster group_num)
+margins, dydx(*)
+
+
+* -------------------------------------------------------
+* Model 5 — Logit for suspense, group-level Elo (goals dataset)
+* suspense = f(fifa_rule, elo1st, ..., elo4th)
+* -------------------------------------------------------
+
+* Main
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th, vce(cluster group_num)
+margins, dydx(*)
+
+* With year trend
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: two qualifying teams
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 0, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: three qualifying teams
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 1, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: 2-points rule
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if year <= 1992, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: 3-points rule
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if year > 1992, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: elo common support
+logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if elo_overlap == 1, vce(cluster group_num)
+margins, dydx(*)
+
+
 * ============================================================
 * MBM DATASET — Suspense model
 * suspense = f(fifa_rule, elo1st, ..., elo4th)
@@ -197,4 +265,39 @@ margins, dydx(*)
 
 * Robustness: elo common support
 logit suspense fifa_rule elo1st elo2nd elo3rd elo4th year_c if elo_overlap == 1, vce(cluster group_num)
+margins, dydx(*)
+
+
+* -------------------------------------------------------
+* MBM Model B — Logit for qualification change (MBM dataset)
+* qual_changed = f(fifa_rule, elo1st, ..., elo4th)
+* Logit, average marginal effects, clustered SE at group level
+* -------------------------------------------------------
+
+* Main
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th, vce(cluster group_num)
+margins, dydx(*)
+
+* With year trend
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: two qualifying teams
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 0, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: three qualifying teams
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if third_qualify == 1, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: 2-points rule
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if year <= 1992, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: 3-points rule
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if year > 1992, vce(cluster group_num)
+margins, dydx(*)
+
+* Robustness: elo common support
+logit qual_changed fifa_rule elo1st elo2nd elo3rd elo4th year_c if elo_overlap == 1, vce(cluster group_num)
 margins, dydx(*)

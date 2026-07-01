@@ -166,7 +166,7 @@ This pattern is consistent with \citet{csato2023avoid}, who, analysing the 2022/
 
 \subsection{Regression Analysis}
 
-We estimate four models to test whether the FIFA rule is associated with more frequent qualification changes and higher suspense, after controlling for competitive balance. All logit models report average marginal effects (AME) with standard errors clustered at the group (year~$\times$~stage) level. We include a continuous time trend $\textit{year\_c} = \textit{year} - 2000$ in the robustness checks.
+We estimate seven models to test whether the FIFA rule is associated with more frequent qualification changes and higher suspense, after controlling for competitive balance. All logit models report average marginal effects (AME) with standard errors clustered at the group (year~$\times$~stage) level. We include a continuous time trend $\textit{year\_c} = \textit{year} - 2000$ in the robustness checks.
 
 \paragraph{Model 1 — Logit for qualification change, match-level Elo (Table~\ref{tab:reg_grp}).}
 The unit of observation is a goal $k$ in group $g$. The dependent variable is \textit{qual\_changed}, a binary indicator equal to~1 when the set of qualifying teams changes from one goal to the next:
@@ -193,15 +193,21 @@ The data are collapsed to one observation per group using the maximum value of \
   + \sum_{r=1}^{4} \gamma_r\,\textit{elo}^{(r)}_g\right)
 \]
 
-\paragraph{MBM Model — Logit for suspense (Table~\ref{tab:reg_mbm}).}
-At the minute-by-minute level, we estimate a logit model for the binary \textit{suspense} indicator using the same group-level Elo controls as Model~2.
+\paragraph{Models 4 \& 5 — Logit for suspense, goal level (Table~\ref{tab:reg_susp}).}
+To test whether the FIFA rule is associated with higher suspense at the moment of each goal, we re-estimate the logit framework with \textit{suspense} replacing \textit{qual\_changed} as the dependent variable, using the same goal-level dataset. Model~4 retains match-level Elo controls (\textit{elo\_fav}, \textit{elo\_und}); Model~5 uses group-level Elo ranks (\textit{elo1st}--\textit{elo4th}).
+
+\paragraph{MBM Models — Logit for suspense and qualification change (Table~\ref{tab:reg_mbm}).}
+At the minute-by-minute level, we estimate two logit models using group-level Elo controls (\textit{elo1st}--\textit{elo4th}). MBM-A uses the binary \textit{suspense} indicator as the dependent variable. MBM-B uses \textit{qual\_changed}, testing whether the FIFA rule is associated with changes in the qualifying composition at the minute level.
 
 \input{tables/reg_grp}
+\input{tables/reg_susp}
 \input{tables/reg_mbm}
 
-Table~\ref{tab:reg_grp} reports the estimates for Models~1--3. Across all specifications, the coefficient on \textit{FIFA\_rule} is negative: World Cup goals are on average 9.7 percentage points less likely to change the qualifying composition than European Championship goals (Model~1, $p = 0.045$, $N = 607$). The direction is consistent in Model~2 ($-6.5$ pp, $p = 0.146$, $N = 725$) and in the Poisson for qualification count (Model~3, coefficient $-0.33$, $p = 0.173$). The MBM suspense model in Table~\ref{tab:reg_mbm} shows a similar pattern, with the FIFA coefficient equal to $-0.031$ ($p = 0.696$), though statistically insignificant.
+Table~\ref{tab:reg_grp} reports the estimates for Models~1--3. Across all specifications, the coefficient on \textit{FIFA\_rule} is negative: World Cup goals are on average 9.7 percentage points less likely to change the qualifying composition than European Championship goals (Model~1, $p = 0.045$, $N = 607$). The direction is consistent in Model~2 ($-6.5$ pp, $p = 0.146$, $N = 725$) and in the Poisson for qualification count (Model~3, coefficient $-0.33$, $p = 0.173$).
 
-These cross-tournament results should be read alongside the within-group evidence from Section~\ref{sec:results}: while the paired tests establish that applying FIFA rules to the same group raises suspense relative to the UEFA criterion, the regression here compares actual World Cup and European Championship groups controlling for competitive balance. The negative coefficient on \textit{FIFA\_rule} indicates that, once team quality is held fixed, goals in World Cup groups are individually less decisive in altering the qualifying composition — consistent with the interpretation that the FIFA criterion distributes qualification uncertainty more evenly across goals rather than concentrating it in a smaller number of pivotal moments. Robustness checks adding the year trend \textit{year\_c} and subsample restrictions (two or three qualifying teams, 2- vs.\ 3-point rule, Elo common support) are reported in the same tables.
+Table~\ref{tab:reg_susp} reports Models~4--5, where the dependent variable is the suspense indicator at goal level. The FIFA\_rule coefficient is small and statistically insignificant in both specifications: $-0.015$ ($p = 0.846$) in Model~4 and $+0.019$ ($p = 0.800$) in Model~5. The sign is not even consistent across the two Elo parameterisations, and no robustness subsample yields significance. Table~\ref{tab:reg_mbm} reports the two MBM models. MBM-A (suspense) confirms the null: the FIFA coefficient is $-0.031$ ($p = 0.696$). MBM-B (qualification change at minute level) tells a different story: World Cup minutes are 10.3 percentage points less likely to involve a change in the qualifying composition ($p = 0.034$), a result that is broadly consistent across robustness subsamples — $-0.105$ under the 3-points rule ($p = 0.021$) and $-0.083$ in the Elo common support sample ($p = 0.082$).
+
+These cross-tournament results should be read alongside the within-group evidence from Section~\ref{sec:results}: while the paired tests establish that applying FIFA rules to the same group raises suspense relative to the UEFA criterion, the regression here compares actual World Cup and European Championship groups controlling for competitive balance. The negative coefficient on \textit{FIFA\_rule} in Models~1--3 indicates that, once team quality is held fixed, goals in World Cup groups are individually less decisive in altering the qualifying composition — consistent with the interpretation that the FIFA criterion distributes qualification uncertainty more evenly across goals rather than concentrating it in a smaller number of pivotal moments. The null results for suspense in Models~4--5 and the MBM model suggest that, while the FIFA rule reshapes \textit{when} qualification scenarios change, it does not systematically raise the share of suspenseful moments across the group stage as a whole. Robustness checks adding the year trend \textit{year\_c} and subsample restrictions (two or three qualifying teams, 2- vs.\ 3-point rule, Elo common support) are reported in the same tables.
 
 
 \section{Conclusion}

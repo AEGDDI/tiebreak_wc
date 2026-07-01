@@ -1,38 +1,42 @@
 
 \begin{table}[H]
 \centering
-\caption{Effect of FIFA tie-breaking rule on suspense (minute-by-minute logit, AME)}
+\caption{MBM logit models: effect of FIFA tie-breaking rule on suspense and qualification change}
 \label{tab:reg_mbm}
 \begin{threeparttable}
-\begin{tabular}{l cc}
+\small
+\begin{tabular}{l cc cc}
 \toprule
- & (1) Main & (2) $+$Year trend \\
+ & \multicolumn{2}{c}{MBM-A: \textit{suspense}} & \multicolumn{2}{c}{MBM-B: \textit{qual\_changed}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & (1) Main & (2) $+$Year & (3) Main & (4) $+$Year \\
 \midrule
-\multicolumn{3}{l}{\textit{Panel A: Main specifications}} \\[2pt]
-FIFA\_rule & $-0.031$ & $0.001$ \\
-          & $(0.081)$ & $(0.083)$ \\[3pt]
-Group-level Elo controls & \checkmark & \checkmark \\
-Year trend (\textit{year\_c}) & -- & \checkmark \\[3pt]
-Observations & 10{,}833 & 10{,}833 \\
-Pseudo-$R^2$ & 0.029 & 0.037 \\
+\multicolumn{5}{l}{\textit{Panel A: Main specifications}} \\[2pt]
+FIFA\_rule & $-0.031$ & $\phantom{-}0.001$ & $-0.103^{**}$ & $-0.086^{*}$ \\
+          & $(0.081)$ & $(0.083)$ & $(0.049)$ & $(0.045)$ \\[3pt]
+Group-level Elo controls & \checkmark & \checkmark & \checkmark & \checkmark \\
+Year trend (\textit{year\_c}) & -- & \checkmark & -- & \checkmark \\[3pt]
+Observations & 10{,}833 & 10{,}833 & 10{,}833 & 10{,}833 \\
+Pseudo-$R^2$ & 0.029 & 0.037 & 0.023 & 0.027 \\
 \midrule
-\multicolumn{3}{l}{\textit{Panel B: Robustness — FIFA\_rule only (all specifications include year\_c)}} \\[2pt]
-\midrule
-Two qualifying teams   & \multicolumn{2}{c}{$-0.084$\phantom{$^{**}$}} \\
-                       & \multicolumn{2}{c}{$(0.095)$} \\
-Three qualifying teams & \multicolumn{2}{c}{$-0.219$\phantom{$^{**}$}} \\
-                       & \multicolumn{2}{c}{$(0.753)$} \\
-2-points rule ($\le 1992$) & \multicolumn{2}{c}{$\phantom{-}0.265$\phantom{$^{**}$}} \\
-                       & \multicolumn{2}{c}{$(0.278)$} \\
-3-points rule ($> 1992$) & \multicolumn{2}{c}{$\phantom{-}0.014$\phantom{$^{**}$}} \\
-                       & \multicolumn{2}{c}{$(0.086)$} \\
-Elo common support     & \multicolumn{2}{c}{$-0.012$\phantom{$^{**}$}} \\
-                       & \multicolumn{2}{c}{$(0.084)$} \\
+\multicolumn{5}{l}{\textit{Panel B: Robustness — FIFA\_rule only (all specifications include year\_c)}} \\[2pt]
+ & \multicolumn{2}{c}{MBM-A} & \multicolumn{2}{c}{MBM-B} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Two qualifying teams    & \multicolumn{2}{c}{$-0.084$} & \multicolumn{2}{c}{$-0.049$} \\
+                        & \multicolumn{2}{c}{$(0.095)$} & \multicolumn{2}{c}{$(0.052)$} \\
+Three qualifying teams  & \multicolumn{2}{c}{$-0.219$} & \multicolumn{2}{c}{$-0.073$} \\
+                        & \multicolumn{2}{c}{$(0.753)$} & \multicolumn{2}{c}{$(0.525)$} \\
+2-points rule ($\le 1992$) & \multicolumn{2}{c}{$\phantom{-}0.265$} & \multicolumn{2}{c}{$\phantom{-}0.290^{**}$} \\
+                        & \multicolumn{2}{c}{$(0.278)$} & \multicolumn{2}{c}{$(0.142)$} \\
+3-points rule ($> 1992$) & \multicolumn{2}{c}{$\phantom{-}0.014$} & \multicolumn{2}{c}{$-0.105^{**}$} \\
+                        & \multicolumn{2}{c}{$(0.086)$} & \multicolumn{2}{c}{$(0.046)$} \\
+Elo common support      & \multicolumn{2}{c}{$-0.012$} & \multicolumn{2}{c}{$-0.083^{*}$} \\
+                        & \multicolumn{2}{c}{$(0.084)$} & \multicolumn{2}{c}{$(0.048)$} \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
 \small
-\item \textit{Notes:} Logit model for the binary \textit{suspense} indicator. Coefficients are average marginal effects (AME). Group-level Elo ranks (\textit{elo1st}--\textit{elo4th}) are included as controls in all specifications. Standard errors are clustered at the group (year~$\times$~stage) level. Panel~B robustness samples: ``Two qual.'' restricts to groups where exactly two teams qualify (\textit{third\_qualify}=0); ``Three qual.'' to groups where three teams qualify; ``2-pts rule'' to years $\le 1992$; ``3-pts rule'' to years $>1992$; ``Elo CS'' to groups within the Elo common support [$1523,\,2127$]. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\item \textit{Notes:} Logit models estimated on the minute-by-minute (MBM) dataset. MBM-A uses the binary \textit{suspense} indicator as the dependent variable; MBM-B uses \textit{qual\_changed}, a binary indicator equal to~1 when the qualifying composition changes at that minute. Group-level Elo ranks (\textit{elo1st}--\textit{elo4th}) are included as controls in all specifications. Standard errors are clustered at the group (year~$\times$~stage) level. Panel~B robustness samples follow the same definitions as in Table~\ref{tab:reg_grp}. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}

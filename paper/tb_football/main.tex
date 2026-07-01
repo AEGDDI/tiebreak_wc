@@ -166,9 +166,9 @@ This pattern is consistent with \citet{csato2023avoid}, who, analysing the 2022/
 
 \subsection{Regression Analysis}
 
-We estimate four models to test whether the FIFA rule is associated with more frequent qualification changes and higher suspense, after controlling for competitive balance. All logit models report average marginal effects (AME) with standard errors clustered at the group (year~$\times$~stage) level. Year fixed effects are excluded throughout: since the World Cup and the European Championship take place in alternating years, a full set of year dummies would be perfectly collinear with \textit{FIFA\_rule}, making the treatment coefficient unidentified. We instead include a continuous time trend $\textit{year\_c} = \textit{year} - 2000$ in the robustness checks.
+We estimate four models to test whether the FIFA rule is associated with more frequent qualification changes and higher suspense, after controlling for competitive balance. All logit models report average marginal effects (AME) with standard errors clustered at the group (year~$\times$~stage) level. We include a continuous time trend $\textit{year\_c} = \textit{year} - 2000$ in the robustness checks.
 
-\paragraph{Model 1 — Logit for qualification change, match-level Elo (Table~\ref{tab:regression_grp}).}
+\paragraph{Model 1 — Logit for qualification change, match-level Elo (Table~\ref{tab:reg_grp}).}
 The unit of observation is a goal $k$ in group $g$. The dependent variable is \textit{qual\_changed}, a binary indicator equal to~1 when the set of qualifying teams changes from one goal to the next:
 \[
 \Pr(\textit{qual\_changed}_{gk} = 1)
@@ -177,7 +177,7 @@ The unit of observation is a goal $k$ in group $g$. The dependent variable is \t
 \]
 where $\Lambda(\cdot)$ is the logistic CDF, \textit{elo\_fav} and \textit{elo\_under} are the Elo ratings of the stronger and weaker team in the match respectively.
 
-\paragraph{Model 2 — Logit for qualification change, group-level Elo ranks (Table~\ref{tab:regression_grp}).}
+\paragraph{Model 2 — Logit for qualification change, group-level Elo ranks (Table~\ref{tab:reg_grp}).}
 The match-level Elo controls are replaced by the four group-level Elo ranks (\textit{elo1st}--\textit{elo4th}, from highest to lowest within the group), which characterise the overall competitive balance of the group rather than the specific match:
 \[
 \Pr(\textit{qual\_changed}_{gk} = 1)

@@ -15,6 +15,10 @@ local base "C:/Users/`c(username)'/Documents/GitHub/tb_football"
 
 import excel using "`base'/data/out/goals_merged.xlsx", firstrow clear
 
+* Drop initial-state rows (minute = 0, no match yet; elo_favorite missing)
+* This matches the Python dropna() on all variables, giving N=381 (WC) / 226 (EU)
+drop if missing(elo_favorite)
+
 * Goal-level summary: World Cup (fifa_rule == 1)
 tabstat goal_minute half_time qual_changed qual_count elo_favorite elo_underdog elo1st elo2nd elo3rd elo4th suspense ///
     if fifa_rule == 1, stat(n mean sd min max) col(stat)
@@ -28,6 +32,8 @@ tabstat goal_minute half_time qual_changed qual_count elo_favorite elo_underdog 
 * Group-level summary (for Poisson model)
 * One row per group, keeping max(qual_count)
 * ============================================================
+
+import excel using "`base'/data/out/goals_merged.xlsx", firstrow clear
 
 preserve
 

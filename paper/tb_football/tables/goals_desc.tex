@@ -1,31 +1,32 @@
 \begin{table}[H]
 \centering
-\caption{Descriptive statistics – Goal events}
+\caption{Descriptive statistics -- Goal-level dataset}
 \label{tab:desc_stats_goals}
+\begin{threeparttable}
 \begin{tabular}{lrrrrrrrr}
 \toprule
-\textbf{Variable} & \multicolumn{4}{c}{FIFA rules} & \multicolumn{4}{c}{UEFA rules} \\
- & Mean & St. Dev. & Min & Max & Mean & St. Dev. & Min & Max \\
+ & \multicolumn{4}{c}{World Cup (FIFA rules)} & \multicolumn{4}{c}{Euro (UEFA rules)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}
+ & Mean & SD & Min & Max & Mean & SD & Min & Max \\
 \midrule
-\textbf{Panel A: World Cup} \\
-Goal minute           & 51.99 & 26.89 & 1 & 96   & 51.99 & 26.89 & 1 & 96 \\
-First half goal       & 1.60  & 0.49  & 1 & 2    & 1.60  & 0.49  & 1 & 2 \\
-Qualification changed & 0.19  & 0.39  & 0 & 1    & 0.18  & 0.38  & 0 & 1 \\
-Qualification count   & 0.72  & 0.98  & 0 & 4    & 0.71  & 1.03  & 0 & 5 \\
-Suspense              & 0.44  & 0.50  & 0 & 1    & 0.36  & 0.48  & 0 & 1 \\
-Elo home              & 1797  & 122   & 1492 & 2090 & 1797  & 122   & 1492 & 2090 \\
-Elo away              & 1838  & 141   & 1460 & 2169 & 1838  & 141   & 1460 & 2169 \\
-\textit{Observations} & \multicolumn{4}{c}{381} & \multicolumn{4}{c}{381} \\
+Goal minute        & 51.99 & 26.89 &  1 &  96 & 52.41 & 26.30 &  2 & 100 \\
+Half time          &  1.60 &  0.49 &  1 &   2 &  1.61 &  0.49 &  1 &   2 \\
+Qual.\ changed     &  0.19 &  0.39 &  0 &   1 &  0.29 &  0.46 &  0 &   1 \\
+Qual.\ count       &  0.72 &  0.99 &  0 &   4 &  1.12 &  1.31 &  0 &   6 \\
+Suspense           &  0.44 &  0.50 &  0 &   1 &  0.49 &  0.50 &  0 &   1 \\
+Elo (favourite)    & 1904.6 & 106.8 & 1644 & 2169 & 1940.8 &  84.5 & 1671 & 2127 \\
+Elo (underdog)     & 1730.4 &  95.3 & 1460 & 1944 & 1812.0 & 102.1 & 1523 & 2040 \\
+Elo 1st            & 1987.9 &  77.1 & 1845 & 2169 & 1998.4 &  58.3 & 1850 & 2127 \\
+Elo 2nd            & 1855.7 &  63.6 & 1678 & 1986 & 1909.6 &  71.9 & 1766 & 2043 \\
+Elo 3rd            & 1777.7 &  61.4 & 1644 & 1920 & 1843.0 &  69.3 & 1671 & 1973 \\
+Elo 4th            & 1668.1 &  72.4 & 1460 & 1852 & 1748.6 &  86.0 & 1523 & 1912 \\
 \midrule
-\textbf{Panel B: Euro } \\
-Goal minute           & 52.41 & 26.30 & 2 & 100  & 52.41 & 26.30 & 2 & 100 \\
-First half goal       & 1.61  & 0.49  & 1 & 2    & 1.61  & 0.49  & 1 & 2 \\
-Qualification changed & 0.32  & 0.47  & 0 & 1    & 0.29  & 0.46  & 0 & 1 \\
-Qualification count   & 1.27  & 1.40  & 0 & 6    & 1.11  & 1.31  & 0 & 6 \\
-Suspense              & 0.50  & 0.50  & 0 & 1    & 0.49  & 0.50  & 0 & 1 \\
-Elo home              & 1857  & 111   & 1600 & 2077 & 1857  & 111   & 1600 & 2077 \\
-Elo away              & 1896  & 113   & 1523 & 2127 & 1896  & 113   & 1523 & 2127 \\
-\textit{Observations} & \multicolumn{4}{c}{226} & \multicolumn{4}{c}{226} \\
+Observations       & \multicolumn{4}{c}{381} & \multicolumn{4}{c}{226} \\
 \bottomrule
 \end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Unit of observation is a goal scored on matchday~3. Initial-state rows (minute~$= 0$, one per group per matchday) are excluded. \textit{Qual.\ changed} equals~1 when the set of qualifying teams changes from one goal to the next. \textit{Qual.\ count} is the cumulative number of such changes within the group. \textit{Suspense} equals~1 when the next goal would change the qualifying composition. \textit{Elo (favourite)} and \textit{Elo (underdog)} are the Elo ratings of the stronger and weaker team in each match. \textit{Elo 1st}--\textit{Elo 4th} are group-level Elo ranks from highest to lowest.
+\end{tablenotes}
+\end{threeparttable}
 \end{table}

@@ -14,7 +14,11 @@
       "Read(//c/Program Files/**)",
       "Bash(\"/c/Program Files/Stata16/StataSE-64.exe\" /e do \"C:/Users/aldi/Documents/GitHub/tb_football/code/estimation/regression_check.do\")",
       "Bash(python -)",
-      "Bash(/c/Users/ALESSANDRO/AppData/Local/Python/bin/python.exe -c ' *)"
+      "Bash(/c/Users/ALESSANDRO/AppData/Local/Python/bin/python.exe -c ' *)",
+      "Bash(cp \"c:\\\\Users\\\\ALESSANDRO\\\\Documents\\\\GitHub\\\\tb_football\\\\png\\\\logo.png\" \"c:\\\\Users\\\\ALESSANDRO\\\\Documents\\\\GitHub\\\\tb_football\\\\paper\\\\tb_football\\\\images\\\\logo.png\" *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\ALESSANDRO\\Documents\\GitHub\\tb_football\\png"
     ]
   }
 }
